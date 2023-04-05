@@ -1988,6 +1988,10 @@ local script = G2L["13"];
 	function Change:Animate(value)
 		BundleAnimationSelected = value
 		BundleAnimationSelectedBefore = BundleAnimationSelected
+		-- workspace
+		if getgenv then
+			writefile("Bubble.bl",BundleAnimationSelected)
+		end
 		if Player.Character:FindFirstChild(AnimateName) then
 			local BubbleAnimate = Player.Character:FindFirstChild(AnimateName)
 			for _1,v1 in pairs(BubbleAnimate:GetChildren()) do
@@ -2224,10 +2228,6 @@ local script = G2L["13"];
 			ProcessingAnimate = true
 		else
 			ProcessingAnimate = false
-		end
-		-- workspace
-		if getgenv then
-			writefile("Bubble.bl",BundleAnimationSelected)
 		end
 		--
 		if ProcessingAnimate then
