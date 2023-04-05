@@ -4,7 +4,11 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/BeemzZy/Bubble/main/M
 
 First release made in just 6 hours.
 
-There will be no also much update. w
+There will be no also much update. 
+
+You can support my youtube channel:
+
+https://www.youtube.com/channel/UCrd2FQempmUgs0_140qJ8cQ
 
 # Info
 Developer/Owner: BeemzZy
