@@ -20,7 +20,7 @@ your animation to whatever you want, as well as emotes.
 
 ![download](https://cdn.discordapp.com/attachments/886182604724899930/1093032002971770931/Bubble.png)
 
-# Every Available Package Animation is Here!
+# Bundles
 
 ![image](https://user-images.githubusercontent.com/129314945/229983140-2ccb25d3-8a85-43d6-80d8-f5bf83d04aef.png)
 
