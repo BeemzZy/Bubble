@@ -1878,6 +1878,7 @@ local script = G2L["13"];
 	repeat wait() until Player.CharacterAdded
 	if Player.Character:WaitForChild("Humanoid").RigType == Enum.HumanoidRigType.R6 then return end
 	if Player.Character:WaitForChild("Animate") then else return end
+	if getgenv then if getgenv().Bubble then return else getgenv().Bubble = true end end
 	
 	print("Needs: Passed.")
 	
@@ -1944,6 +1945,17 @@ local script = G2L["13"];
 	
 	local AnimationPackages = require(ScreenGui:FindFirstChild("AnimationPackages"))
 	local Emotes = require(ScreenGui:FindFirstChild("Emotes"))
+	
+	-- -- Load Exploit Workspace
+	
+	if getgenv then
+		if readfile then
+			if readfile("Bubble.bl") then
+				BundleAnimationSelected = readfile("Bubble.bl")
+				BundleAnimationSelectedBefore = readfile("Bubble.bl")
+			end
+		end
+	end
 	
 	-- -- -- Functions
 	
@@ -2199,12 +2211,23 @@ local script = G2L["13"];
 	
 	print("Function: Passed")
 	
+	-- -- -- -- Workspace Exploit Memory
+	if getgenv then
+		if readfile("Bubble.bl") then
+			local information = readfile("Bubble.bl")
+		end
+	end
+	
 	-- Repeats
 	while Repeats do RunService.RenderStepped:Wait()
 		if Player.CharacterAdded then
 			ProcessingAnimate = true
 		else
 			ProcessingAnimate = false
+		end
+		-- workspace
+		if getgenv then
+			writefile("Bubble.bl",BundleAnimationSelected)
 		end
 		--
 		if ProcessingAnimate then
