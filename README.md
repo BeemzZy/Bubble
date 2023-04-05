@@ -1,5 +1,7 @@
 # Bubble
-Bubble Client Animator
+Loadstring:
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/BeemzZy/Bubble/main/Main.lua'))()
 
 # Info
 Developer/Owner: BeemzZy
