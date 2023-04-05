@@ -2,6 +2,8 @@
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/BeemzZy/Bubble/main/Main.lua'))()
 
+Keybind to Close/Open: "L"
+
 First release made in just 6 hours.
 
 There will be no also much update. 
