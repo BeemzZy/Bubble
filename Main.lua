@@ -1862,8 +1862,6 @@ end;
 -- StarterGui.Bubble.Main
 local function C_13()
 local script = G2L["13"];
-	--!nonstrict
-	
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -1876,9 +1874,9 @@ local script = G2L["13"];
 	local Mouse = Player:GetMouse()
 	
 	repeat wait() until Player.CharacterAdded
-	if Player.Character:WaitForChild("Humanoid").RigType == Enum.HumanoidRigType.R6 then return end
-	if Player.Character:WaitForChild("Animate") then else return end
-	if getgenv then if getgenv().Bubble then return else getgenv().Bubble = true end end
+	if Player.Character:WaitForChild("Humanoid").RigType == Enum.HumanoidRigType.R6 then script.Parent:Remove() return end
+	if Player.Character:WaitForChild("Animate") then else script.Parent:Remove() return end
+	if getgenv then if getgenv().Bubble then script.Parent:Remove() return else getgenv().Bubble = true end end
 	
 	print("Needs: Passed.")
 	
