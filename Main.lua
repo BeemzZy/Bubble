@@ -30,9 +30,9 @@ G2L["3"]["BorderSizePixel"] = 0;
 G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["3"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["3"]["BackgroundTransparency"] = 0.30000001192092896;
-G2L["3"]["Size"] = UDim2.new(0.23717421293258667, 0, 0.4037036895751953, 0);
-G2L["3"]["Position"] = UDim2.new(0.15000000596046448, 0, 0.5, 0);
-G2L["3"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+G2L["3"]["Size"] = UDim2.new(0.2370000034570694, 0, 0.414000004529953, 0);
+G2L["3"]["Position"] = UDim2.new(0.13200515508651733, 0, 0.5, 0);
+G2L["3"]["AutomaticSize"] = Enum.AutomaticSize.Y;
 G2L["3"]["Name"] = [[Animate]];
 
 -- StarterGui.Bubble.Background.Animate.UIGradient
@@ -55,7 +55,7 @@ G2L["5"]["Size"] = UDim2.new(0.9419999718666077, 0, 1, 0);
 G2L["5"]["ScrollBarImageColor3"] = Color3.fromRGB(148, 153, 255);
 G2L["5"]["ScrollBarThickness"] = 0;
 G2L["5"]["Position"] = UDim2.new(0.5, 0, 0, 0);
-G2L["5"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["5"]["AutomaticSize"] = Enum.AutomaticSize.XY;
 
 -- StarterGui.Bubble.Background.Animate.ScrollingFrame.UIListLayout
 G2L["6"] = Instance.new("UIListLayout", G2L["5"]);
@@ -72,7 +72,7 @@ G2L["7"]["TextSize"] = 14;
 G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.ExtraLight, Enum.FontStyle.Normal);
 G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["7"]["Visible"] = false;
-G2L["7"]["Size"] = UDim2.new(0.768571674823761, 0, 0.038865964859724045, 0);
+G2L["7"]["Size"] = UDim2.new(0.7689999938011169, 0, 0.029999999329447746, 0);
 G2L["7"]["Name"] = [[AnimationButton]];
 G2L["7"]["Text"] = [[Default]];
 G2L["7"]["Position"] = UDim2.new(0.11571409553289413, 0, 6.622312298532051e-08, 0);
@@ -100,9 +100,9 @@ G2L["b"]["BorderSizePixel"] = 0;
 G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["b"]["BackgroundTransparency"] = 0.30000001192092896;
-G2L["b"]["Size"] = UDim2.new(0.14704543352127075, 0, 0.38880303502082825, 0);
-G2L["b"]["Position"] = UDim2.new(0.8999999761581421, 0, 0.5, 0);
-G2L["b"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+G2L["b"]["Size"] = UDim2.new(0.1469999998807907, 0, 0.289000004529953, 0);
+G2L["b"]["Position"] = UDim2.new(0.9100000262260437, 0, 0.5, 0);
+G2L["b"]["AutomaticSize"] = Enum.AutomaticSize.Y;
 G2L["b"]["Name"] = [[Emote]];
 
 -- StarterGui.Bubble.Background.Emote.UIGradient
@@ -142,10 +142,10 @@ G2L["f"]["TextSize"] = 14;
 G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.ExtraLight, Enum.FontStyle.Normal);
 G2L["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["f"]["Visible"] = false;
-G2L["f"]["Size"] = UDim2.new(0.768571674823761, 0, 0.038865964859724045, 0);
+G2L["f"]["Size"] = UDim2.new(0.7689999938011169, 0, 0.03500000014901161, 0);
 G2L["f"]["Name"] = [[EmoteButton]];
 G2L["f"]["Text"] = [[Default]];
-G2L["f"]["Position"] = UDim2.new(0.11571409553289413, 0, 6.622312298532051e-08, 0);
+G2L["f"]["Position"] = UDim2.new(0.11571411043405533, 0, 0, 0);
 G2L["f"]["BackgroundTransparency"] = 0.6000000238418579;
 
 -- StarterGui.Bubble.Background.Emote.ScrollingFrame.EmoteButton.UICorner
@@ -1827,6 +1827,169 @@ return {
 			["Animation1"] = "rbxassetid://3303162274"
 		},
 	},
+	--- Canceled Animations: Requested by: @retard142 -- https://www.youtube.com/channel/UCF4AHyR3mkvzC0CfCYN0AFQ
+	["Confident (UNRELEASED)"] = {
+		["climb"] = {
+			["ClimbAnim"] = "rbxassetid://1069946257"
+		},
+		["fall"] = {
+			["FallAnim"] = "rbxassetid://1069973677"
+		},
+		["idle"] = {
+			["Animation1"] = "rbxassetid://1069977950",
+			["Animation2"] = "rbxassetid://1069987858"
+		},
+		["jump"] = {
+			["JumpAnim"] = "rbxassetid://1069984524"
+		},
+		["run"] = {
+			["RunAnim"] = "rbxassetid://1070001516"
+		},
+		["walk"] = {
+			["WalkAnim"] = "rbxassetid://1070001516"
+		},
+		["swimidle"] = {
+			["SwimIdle"] = "rbxassetid://1070012133"
+		},
+		["swim"] = {
+			["Swim"] = "rbxassetid://1070009914"
+		},
+	},
+	["Popstar (UNRELEASED)"] = {
+		["climb"] = {
+			["ClimbAnim"] = "rbxassetid://1148811837"
+		},
+		["fall"] = {
+			["FallAnim"] = "rbxassetid://1212900995"
+		},
+		["idle"] = {
+			["Animation1"] = "rbxassetid://1212900985",
+			["Animation2"] = "rbxassetid://1212954651"
+		},
+		["jump"] = {
+			["JumpAnim"] = "rbxassetid://1212954642"
+		},
+		["run"] = {
+			["RunAnim"] = "rbxassetid://1212980348"
+		},
+		["walk"] = {
+			["WalkAnim"] = "rbxassetid://1212980348"
+		},
+		["swimidle"] = {
+			["SwimIdle"] = "rbxassetid://1151221899"
+		},
+		["swim"] = {
+			["Swim"] = "rbxassetid://1212852603"
+		},
+	},
+	["Patrol (UNRELEASED)"] = {
+		["climb"] = {
+			["ClimbAnim"] = "rbxassetid://1148811837"
+		},
+		["fall"] = {
+			["FallAnim"] = "rbxassetid://1148863382"
+		},
+		["idle"] = {
+			["Animation1"] = "rbxassetid://1149612882",
+			["Animation2"] = "rbxassetid://1150842221"
+		},
+		["jump"] = {
+			["JumpAnim"] = "rbxassetid://1150944216"
+		},
+		["run"] = {
+			["RunAnim"] = "rbxassetid://1150967949"
+		},
+		["walk"] = {
+			["WalkAnim"] = "rbxassetid://1150967949"
+		},
+		["swimidle"] = {
+			["SwimIdle"] = "rbxassetid://1151221899"
+		},
+		["swim"] = {
+			["Swim"] = "rbxassetid://1151204998"
+		},
+	},
+	["Sneaky (UNRELEASED)"] = {
+		["climb"] = {
+			["ClimbAnim"] = "rbxassetid://1132461372"
+		},
+		["fall"] = {
+			["FallAnim"] = "rbxassetid://1132469004"
+		},
+		["idle"] = {
+			["Animation1"] = "rbxassetid://1132473842",
+			["Animation2"] = "rbxassetid://1132477671"
+		},
+		["jump"] = {
+			["JumpAnim"] = "rbxassetid://1132489853"
+		},
+		["run"] = {
+			["RunAnim"] = "rbxassetid://1132494274"
+		},
+		["walk"] = {
+			["WalkAnim"] = "rbxassetid://1132494274"
+		},
+		["swimidle"] = {
+			["SwimIdle"] = "rbxassetid://1132506407"
+		},
+		["swim"] = {
+			["Swim"] = "rbxassetid://1132500520"
+		},
+	},
+	["Princess (UNRELEASED)"] = {
+		["climb"] = {
+			["ClimbAnim"] = "rbxassetid://940996062"
+		},
+		["fall"] = {
+			["FallAnim"] = "rbxassetid://941000007"
+		},
+		["idle"] = {
+			["Animation1"] = "rbxassetid://941003647",
+			["Animation2"] = "rbxassetid://941013098"
+		},
+		["jump"] = {
+			["JumpAnim"] = "rbxassetid://941008832"
+		},
+		["run"] = {
+			["RunAnim"] = "rbxassetid://941015281"
+		},
+		["walk"] = {
+			["WalkAnim"] = "rbxassetid://941015281"
+		},
+		["swimidle"] = {
+			["SwimIdle"] = "rbxassetid://941025398"
+		},
+		["swim"] = {
+			["Swim"] = "rbxassetid://941018893"
+		},
+	},
+	["Cowboy (UNRELEASED)"] = {
+		["climb"] = {
+			["ClimbAnim"] = "rbxassetid://1014380606"
+		},
+		["fall"] = {
+			["FallAnim"] = "rbxassetid://1014384571"
+		},
+		["idle"] = {
+			["Animation1"] = "rbxassetid://1014390418",
+			["Animation2"] = "rbxassetid://1014398616"
+		},
+		["jump"] = {
+			["JumpAnim"] = "rbxassetid://1014394726"
+		},
+		["run"] = {
+			["RunAnim"] = "rbxassetid://1014401683"
+		},
+		["walk"] = {
+			["WalkAnim"] = "rbxassetid://1014401683"
+		},
+		["swimidle"] = {
+			["SwimIdle"] = "rbxassetid://1014411816"
+		},
+		["swim"] = {
+			["Swim"] = "rbxassetid://1014406523"
+		},
+	}
 }
 end;
 };
@@ -1848,14 +2011,23 @@ return {
 	["Heroland"] = "rbxassetid://5104344710",
 	["Jw"] = "rbxassetid://4940564896",
 	["Lined"] = "rbxassetid://4049037604",
-	["Monkey"] = "rbxassetid://3333499508",
-	["Noobflex"] = "rbxassetid://3333387824",
+	["Monkey"] = "http://www.roblox.com/asset/?id=10714388352",
+	["Bodybuilder"] = "rbxassetid://3333387824",
 	["Rock"] = "rbxassetid://3361276673",
 	["Shuffle"] = "rbxassetid://4349242221",
 	["Shy"] = "rbxassetid://3337978742",
 	["Sleep"] = "rbxassetid://4686925579",
 	["T-Pose"] = "rbxassetid://3338010159",
-	["Twirl"] = "rbxassetid://3334968680"
+	["Twirl"] = "rbxassetid://3334968680",
+	["Cursty"] = "http://www.roblox.com/asset/?id=10714061912",
+	["Lotus"] = "http://www.roblox.com/asset/?id=12507085924",
+	["Don't Go"] = "http://www.roblox.com/asset/?id=11309255148",
+	["Floor"] = "http://www.roblox.com/asset/?id=10214314957",
+	["V Pose"] = "http://www.roblox.com/asset/?id=10214319518",
+	["Hips Poppin"] = "http://www.roblox.com/asset/?id=10714364213",
+	["Agree"] = "http://www.roblox.com/asset/?id=10713954623",
+	["Old Town"] = "http://www.roblox.com/asset/?id=10714391240",
+	["Dolphin"] = "http://www.roblox.com/asset/?id=10714068222"
 }
 end;
 };
@@ -1869,6 +2041,7 @@ local script = G2L["13"];
 	local Lighting = game:GetService("Lighting")
 	local TweenService = game:GetService("TweenService")
 	local StarterGui = game:GetService("StarterGui")
+	local SoundService = game:GetService("SoundService")
 	
 	local Player = Players.LocalPlayer
 	local Mouse = Player:GetMouse()
@@ -1891,14 +2064,33 @@ local script = G2L["13"];
 	local ScrollingEmoteFrame = EmoteFrame.ScrollingFrame
 	local EmoteButton = ScrollingEmoteFrame.EmoteButton
 	
+	if RunService:IsStudio() then
+	else
+		if getgenv then
+			ScreenGui.Parent = game.CoreGui
+		end
+	end
+	
 	local BlurEffect = Instance.new("BlurEffect", Lighting)
 	BlurEffect.Size = 0 -- 17
 	BlurEffect.Enabled = true
 	
 	-- Setup
+	
+	local FramePosition = {
+		["Animate"] = {
+			[1] = UDim2.new(0.5, 0, 0.5, 0),
+			[2] = Animate.Position
+		},
+		["EmoteFrame"] = {
+			[1] = UDim2.new(0.5, 0, 0.5, 0),
+			[2] = EmoteFrame.Position
+		}
+	}
+	
 	Background.Position = UDim2.new(-1, 0, 0, 0)
-	Animate.Position = UDim2.new(0.5, 0, 0.5, 0)
-	EmoteFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+	Animate.Position = FramePosition.Animate[1]
+	EmoteFrame.Position = FramePosition.EmoteFrame[1]
 	EmoteFrame.BackgroundTransparency = 1
 	EmoteFrame.UIStroke.Transparency = 1
 	
@@ -1910,11 +2102,6 @@ local script = G2L["13"];
 	TweenService:Create(BlurEffect, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
 		Size = 17
 	}):Play()
-	
-	if RunService:IsStudio() then
-	else
-		ScreenGui.Parent = game.CoreGui
-	end
 	
 	print("GUI: Passed.")
 	
@@ -1933,6 +2120,8 @@ local script = G2L["13"];
 	local Create = {}
 	local Remove = {}
 	local Change = {}
+	local Sound = {}
+	
 	local GUI = {
 		Open = true,
 		OpenDirectionRight = false,
@@ -1956,6 +2145,22 @@ local script = G2L["13"];
 	end
 	
 	-- -- -- Functions
+	
+	function Sound:Create(contents)
+		local Sound
+		if SoundService:FindFirstChild("Natara") then
+			Sound = SoundService:FindFirstChild("Natara") else Sound = Instance.new("Sound", SoundService)
+		end
+		Sound.SoundId = "http://www.roblox.com/asset/?id="..contents.SoundId
+		Sound.Name = contents.Name or "Natara"
+		Sound.Volume = contents.Volume or 1
+		Sound.PlaybackSpeed = contents.PlaybackSpeed or 1
+		Sound.Looped = contents.Looped or false
+		coroutine.resume(coroutine.create(function()
+			repeat wait() until Sound.IsLoaded
+			Sound:Play()
+		end))
+	end
 	
 	function Remove:Animate()
 		if Player.Character:FindFirstChild("Animate") then
@@ -2027,7 +2232,7 @@ local script = G2L["13"];
 	
 	-- Changing Animation
 	function GUI.Animate:GenerateButtons ()
-		for int,value in pairs(AnimationPackages) do wait(0.05)
+		for int,value in pairs(AnimationPackages) do RunService.Heartbeat:Wait()
 			local Button = AnimationButton:Clone()
 			Button.Parent = ScrollingFrame
 	
@@ -2037,27 +2242,44 @@ local script = G2L["13"];
 	
 			Button.Name = int
 			TweenService:Create(Button, TweenInfo.new(0.35, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
-				Size = AnimationButton.Size,
+				Size = UDim2.new(0, 0, AnimationButton.Size.Y.Scale, 0),
 				BackgroundTransparency = AnimationButton.BackgroundTransparency,
-				TextTransparency = AnimationButton.TextTransparency
 			}):Play()
+			task.delay(0.35, function()
+				TweenService:Create(Button, TweenInfo.new(0.5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+					Size = AnimationButton.Size,
+					TextTransparency = AnimationButton.TextTransparency
+				}):Play()
+			end)
 			Button.Visible = true
 			Button.Text = int
 			Button.MouseButton1Click:Connect(function()
 				Change:Animate(int)
+				Sound:Create({
+					SoundId = 10128760939
+				})
+			end)
+			Button.MouseEnter:Connect(function()
+				Sound:Create({
+					SoundId = 10066931761
+				})
 			end)
 		end
 	end
 	
 	function GUI.Animate:ClearButtons ()
-		for int,value in pairs(ScrollingFrame:GetChildren()) do wait(0.05)
+		for int,value in pairs(ScrollingFrame:GetChildren()) do RunService.Heartbeat:Wait()
 			if value:IsA("TextButton") and value.Name ~= "AnimationButton" then
 				TweenService:Create(value, TweenInfo.new(0.35, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
-					Size = UDim2.new(0, 0, 0, 0),
-					BackgroundTransparency = 1,
+					Size = UDim2.new(0, 0, value.Size.Y.Scale, 0),
 					TextTransparency = 1
 				}):Play()
-				task.delay(0.5, function()
+				task.delay(0.35, function()
+					TweenService:Create(value, TweenInfo.new(0.5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+						Size = UDim2.new(0, 0, 0, 0),
+						BackgroundTransparency = 1
+					}):Play()
+					task.wait(0.5)
 					value:Remove()
 				end)
 			end
@@ -2067,7 +2289,7 @@ local script = G2L["13"];
 	----- E mOT es (Emotes)
 	
 	function GUI.Emote:GenerateButtons ()
-		for int,value in pairs(Emotes) do wait(0.05)
+		for int,value in pairs(Emotes) do RunService.Heartbeat:Wait()
 			local Button = EmoteButton:Clone()
 			Button.Parent = ScrollingEmoteFrame
 	
@@ -2077,27 +2299,44 @@ local script = G2L["13"];
 	
 			Button.Name = int
 			TweenService:Create(Button, TweenInfo.new(0.35, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
-				Size = EmoteButton.Size,
+				Size = UDim2.new(0, 0, EmoteButton.Size.Y.Scale, 0),
 				BackgroundTransparency = EmoteButton.BackgroundTransparency,
-				TextTransparency = EmoteButton.TextTransparency
 			}):Play()
+			task.delay(0.35, function()
+				TweenService:Create(Button, TweenInfo.new(0.5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+					Size = EmoteButton.Size,
+					TextTransparency = EmoteButton.TextTransparency
+				}):Play()
+			end)
 			Button.Visible = true
 			Button.Text = int
 			Button.MouseButton1Click:Connect(function()
 				Change:Emote(value)
+				Sound:Create({
+					SoundId = 10128760939
+				})
+			end)
+			Button.MouseEnter:Connect(function()
+				Sound:Create({
+					SoundId = 10066931761
+				})
 			end)
 		end
 	end
 	
 	function GUI.Emote:ClearButtons ()
-		for int,value in pairs(ScrollingEmoteFrame:GetChildren()) do wait(0.05)
+		for int,value in pairs(ScrollingEmoteFrame:GetChildren()) do RunService.Heartbeat:Wait()
 			if value:IsA("TextButton") and value.Name ~= "EmoteButton" then
 				TweenService:Create(value, TweenInfo.new(0.35, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
-					Size = UDim2.new(0, 0, 0, 0),
-					BackgroundTransparency = 1,
+					Size = UDim2.new(0, 0, value.Size.Y.Scale, 0),
 					TextTransparency = 1
 				}):Play()
-				task.delay(0.5, function()
+				task.delay(0.35, function()
+					TweenService:Create(value, TweenInfo.new(0.5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+						Size = UDim2.new(0, 0, 0, 0),
+						BackgroundTransparency = 1
+					}):Play()
+					task.wait(0.5)
 					value:Remove()
 				end)
 			end
@@ -2118,8 +2357,11 @@ local script = G2L["13"];
 			BlurEffectTween:Play()
 			
 			GUI.Emote:ClearButtons()
+			Sound:Create({
+				SoundId = 1323739650,
+			})
 			TweenService:Create(EmoteFrame, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-				Position = UDim2.new(0.5, 0, 0.5, 0),
+				Position = FramePosition.EmoteFrame[1],
 				BackgroundTransparency = 1
 			}):Play()
 			TweenService:Create(EmoteFrame.UIStroke, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
@@ -2127,9 +2369,12 @@ local script = G2L["13"];
 			}):Play()
 			
 			GUI.Animate:ClearButtons()
+			Sound:Create({
+				SoundId = 1323739650,
+			})
 	
 			TweenService:Create(Animate, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-				Position = UDim2.new(0.5, 0, 0.5, 0)
+				Position = FramePosition.Animate[1]
 			}):Play()
 	
 			local BackgroundTweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0)
@@ -2140,7 +2385,7 @@ local script = G2L["13"];
 			local BackgroundTween = TweenService:Create(Background, BackgroundTweenInfo, BackgroundTweenGoal)
 			BackgroundTween:Play()
 	
-			task.delay(1.3, function()
+			task.delay(1, function()
 				GUI.CanBeOpen = true
 			end)
 		else
@@ -2157,24 +2402,30 @@ local script = G2L["13"];
 			local BackgroundTweenGoal = {Position = UDim2.new(0, 0, 0, 0)}
 			local BackgroundTween = TweenService:Create(Background, BackgroundTweenInfo, BackgroundTweenGoal)
 			BackgroundTween:Play()
-			
-			TweenService:Create(EmoteFrame, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-				Position = UDim2.new(0.9, 0,0.5, 0),
-				BackgroundTransparency = 0.3
-			}):Play()
-			TweenService:Create(EmoteFrame.UIStroke, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-				Transparency = 0.3
-			}):Play()
 	
 			task.delay(0.6, function()
 				GUI.Animate:GenerateButtons()
+				Sound:Create({
+					SoundId = 1524549907,
+				})
 				coroutine.resume(coroutine.create(function()
+					task.wait(1.3)
 					GUI.Emote:GenerateButtons()
+					Sound:Create({
+						SoundId = 1524549907,
+					})
 				end))
 				TweenService:Create(Animate, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-					Position = UDim2.new(0.15, 0, 0.5, 0)
+					Position = FramePosition.Animate[2]
 				}):Play()
-				task.wait(1.6)
+				TweenService:Create(EmoteFrame, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
+					Position = FramePosition.EmoteFrame[2],
+					BackgroundTransparency = 0.3
+				}):Play()
+				TweenService:Create(EmoteFrame.UIStroke, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
+					Transparency = 0.3
+				}):Play()
+				task.wait(3)
 				GUI.CanBeOpen = true
 			end)
 		end
@@ -2198,16 +2449,16 @@ local script = G2L["13"];
 			GUI.Emote:GenerateButtons()
 		end))
 		TweenService:Create(Animate, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-			Position = UDim2.new(0.15, 0, 0.5, 0)
+			Position = FramePosition.Animate[2]
 		}):Play()
 		TweenService:Create(EmoteFrame, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-			Position = UDim2.new(0.9, 0,0.5, 0),
+			Position = FramePosition.EmoteFrame[2],
 			BackgroundTransparency = 0.3
 		}):Play()
 		TweenService:Create(EmoteFrame.UIStroke, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
 			Transparency = 0.3
 		}):Play()
-		task.wait(2)
+		task.wait(3)
 		GUI.CanBeOpen = true
 	end)
 	
@@ -2227,7 +2478,7 @@ local script = G2L["13"];
 		else
 			ProcessingAnimate = false
 		end
-		--
+		-- ---- - - --- - ---- --
 		if ProcessingAnimate then
 			Create:Animate()
 		end
