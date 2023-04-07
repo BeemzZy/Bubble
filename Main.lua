@@ -396,12 +396,11 @@ G2L["25"]["BackgroundTransparency"] = 0.30000001192092896;
 G2L["25"]["Size"] = UDim2.new(0.7930174469947815, 0, 0.5265700221061707, 0);
 G2L["25"]["Position"] = UDim2.new(0.3478803038597107, 0, -0.07219810038805008, 0);
 G2L["25"]["AutomaticSize"] = Enum.AutomaticSize.XY;
-G2L["25"]["Visible"] = false;
 G2L["25"]["Name"] = [[Images]];
 
 -- StarterGui.Bubble.Background.Updates.Images.UICorner
 G2L["26"] = Instance.new("UICorner", G2L["25"]);
-G2L["26"]["CornerRadius"] = UDim.new(500, 500);
+
 
 -- StarterGui.Bubble.Background.Updates.Images.UIGradient
 G2L["27"] = Instance.new("UIGradient", G2L["25"]);
@@ -416,14 +415,14 @@ G2L["28"]["BorderSizePixel"] = 0;
 G2L["28"]["ScaleType"] = Enum.ScaleType.Fit;
 G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["28"]["Image"] = [[http://www.roblox.com/asset/?id=13022875479]];
-G2L["28"]["Size"] = UDim2.new(0, 96, 0, 95);
+G2L["28"]["Size"] = UDim2.new(0.8965234160423279, 0, 1.0252329111099243, 0);
 G2L["28"]["Name"] = [[Image]];
 G2L["28"]["BackgroundTransparency"] = 1;
-G2L["28"]["Position"] = UDim2.new(0, 7, 0, 6);
+G2L["28"]["Position"] = UDim2.new(0.052113935351371765, 0, 0.009901206940412521, 0);
 
 -- StarterGui.Bubble.Background.Updates.Images.Image.UICorner
 G2L["29"] = Instance.new("UICorner", G2L["28"]);
-G2L["29"]["CornerRadius"] = UDim.new(500, 500);
+
 
 -- StarterGui.Bubble.Background.Updates.Images.OpenInfoButton
 G2L["2a"] = Instance.new("TextButton", G2L["25"]);
@@ -434,10 +433,10 @@ G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2a"]["TextSize"] = 14;
 G2L["2a"]["FontFace"] = Font.new([[rbxassetid://11322590111]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["2a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2a"]["Size"] = UDim2.new(0, 18, 0, 50);
+G2L["2a"]["Size"] = UDim2.new(0.16247670352458954, 0, 0.44314607977867126, 0);
 G2L["2a"]["Name"] = [[OpenInfoButton]];
 G2L["2a"]["Text"] = [[>]];
-G2L["2a"]["Position"] = UDim2.new(0, 103, 0, 29);
+G2L["2a"]["Position"] = UDim2.new(0.934846043586731, 0, 0.2924764156341553, 0);
 G2L["2a"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.Bubble.Background.Updates.Images.OpenInfoButton.Message
@@ -445,8 +444,8 @@ G2L["2b"] = Instance.new("Frame", G2L["2a"]);
 G2L["2b"]["ZIndex"] = 2;
 G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2b"]["BackgroundTransparency"] = 0.30000001192092896;
-G2L["2b"]["Size"] = UDim2.new(8.38926887512207, 0, 1.2028459310531616, 0);
-G2L["2b"]["Position"] = UDim2.new(1.5265672206878662, 0, -0.12284576147794724, 0);
+G2L["2b"]["Size"] = UDim2.new(8.38926887512207, 0, 1.9761830568313599, 0);
+G2L["2b"]["Position"] = UDim2.new(1.1877758502960205, 0, -0.49273812770843506, 0);
 G2L["2b"]["Name"] = [[Message]];
 
 -- StarterGui.Bubble.Background.Updates.Images.OpenInfoButton.Message.UIGradient
@@ -457,11 +456,12 @@ G2L["2c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.f
 
 -- StarterGui.Bubble.Background.Updates.Images.OpenInfoButton.Message.UICorner
 G2L["2d"] = Instance.new("UICorner", G2L["2b"]);
-G2L["2d"]["CornerRadius"] = UDim.new(500, 500);
+
 
 -- StarterGui.Bubble.Background.Updates.Images.OpenInfoButton.Message.TextLabel
 G2L["2e"] = Instance.new("TextLabel", G2L["2b"]);
 G2L["2e"]["TextWrapped"] = true;
+G2L["2e"]["RichText"] = true;
 G2L["2e"]["TextScaled"] = true;
 G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
@@ -469,7 +469,7 @@ G2L["2e"]["TextTransparency"] = 0.5;
 G2L["2e"]["TextSize"] = 14;
 G2L["2e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2e"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["2e"]["Text"] = [[Hello, Retard.]];
+G2L["2e"]["Text"] = [[His name is Retard, he's the one who Requested Cancelled Animations]];
 G2L["2e"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.Bubble.Background.Updates.Images.UIAspectRatioConstraint
@@ -2776,7 +2776,7 @@ local script = G2L["3a"];
 				}):Play()
 				task.delay(0.6, function()
 					TweenService:Create(TextOpenInfoButton, TweenInfo.new(0.8, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-						Size = UDim2.new(0, 0,1.203, 0),
+						Size = UDim2.new(0, 0,TextOpenInfoButton.Size.Y.Scale, 0),
 						BackgroundTransparency = 1
 					}):Play()
 					task.wait(0.8)
@@ -2786,7 +2786,7 @@ local script = G2L["3a"];
 				GUI.UpdateFrame.OpenInfoButtonOpened = true
 				GUI.UpdateFrame.CanOpenInfoButtonOpened = false
 				TweenService:Create(TextOpenInfoButton, TweenInfo.new(0.8, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-					Size = UDim2.new(8.389, 0,1.203, 0),
+					Size = UDim2.new(8.389, 0,TextOpenInfoButton.Size.Y.Scale, 0),
 					BackgroundTransparency = 0.3
 				}):Play()
 				task.delay(0.6, function()
