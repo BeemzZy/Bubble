@@ -432,7 +432,7 @@ G2L["2a"]["TextScaled"] = true;
 G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2a"]["TextSize"] = 14;
 G2L["2a"]["FontFace"] = Font.new([[rbxassetid://11322590111]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2a"]["Size"] = UDim2.new(0.16247670352458954, 0, 0.44314607977867126, 0);
 G2L["2a"]["Name"] = [[OpenInfoButton]];
 G2L["2a"]["Text"] = [[>]];
@@ -2950,16 +2950,16 @@ local script = G2L["3a"];
 			TweenService:Create(EmoteFrame.UIStroke, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
 				Transparency = 1
 			}):Play()
-			
+
 			GUI.Animate:ClearButtons()
 			Sound:Create({
 				SoundId = 1323739650,
 			})
-	
+
 			TweenService:Create(AnimateFrame, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
 				Position = FramePosition.AnimateFrame[1]
 			}):Play()
-	
+
 			local BackgroundTweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0)
 			local BackgroundTweenGoal = {Position = UDim2.new(-1, 0, 0, 0)}
 			if GUI.OpenDirectionRight then
@@ -2967,7 +2967,7 @@ local script = G2L["3a"];
 			end
 			local BackgroundTween = TweenService:Create(Background, BackgroundTweenInfo, BackgroundTweenGoal)
 			BackgroundTween:Play()
-	
+
 			task.delay(1, function()
 				GUI.CanBeOpen = true
 			end)
@@ -2975,17 +2975,17 @@ local script = G2L["3a"];
 			GUI.Open = true
 			GUI.CanBeOpen = false
 			local TweenTime = 0.9
-	
+
 			local BlurEffectTweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0)
 			local BlurEffectTweenGoal = {Size = 17}
 			local BlurEffectTween = TweenService:Create(BlurEffect, BlurEffectTweenInfo, BlurEffectTweenGoal)
 			BlurEffectTween:Play()
-	
+
 			local BackgroundTweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0)
 			local BackgroundTweenGoal = {Position = UDim2.new(0, 0, 0, 0)}
 			local BackgroundTween = TweenService:Create(Background, BackgroundTweenInfo, BackgroundTweenGoal)
 			BackgroundTween:Play()
-	
+
 			task.delay(0.6, function()
 				GUI.Animate:GenerateButtons()
 				Sound:Create({
@@ -3016,7 +3016,7 @@ local script = G2L["3a"];
 			end)
 		end
 	end
-	
+
 	function InputBegan (input, gameProcessedEvent)
 		if not gameProcessedEvent then
 			if input.KeyCode == Keybinds.OpenCloseKey then
@@ -3027,7 +3027,7 @@ local script = G2L["3a"];
 		end
 	end
 	UserInputService.InputBegan:Connect(InputBegan)
-	
+
 	task.delay(2, function()
 		GUI.Animate:GenerateButtons()
 		coroutine.resume(coroutine.create(function()
@@ -3100,18 +3100,18 @@ local script = G2L["3a"];
 		task.wait(3)
 		GUI.CanBeOpen = true
 	end)
-	
+
 	print("Every Function: Passed")
-	
+
 	-- -- -- -- Workspace Exploit Memory
 	if getgenv then
 		if readfile("Bubble.bl") then
 			local information = readfile("Bubble.bl")
 		end
 	end
-	
+
 	print("Exploit Memory: Passed")
-	
+
 	-- Repeats
 	while Repeats do RunService.RenderStepped:Wait()
 		if Player.CharacterAdded then
@@ -3137,7 +3137,7 @@ local script = G2L["3a"];
 			Create:Animate()
 		end
 	end
-	
+
 end;
 task.spawn(C_3a);
 
