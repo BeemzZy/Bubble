@@ -337,13 +337,13 @@ G2L["1c"] = Instance.new("UICorner", G2L["1b"]);
 
 -- StarterGui.Bubble.Background.Updates.Notification.Notification
 G2L["1d"] = Instance.new("Sound", G2L["1b"]);
+G2L["1d"]["Volume"] = 1;
 G2L["1d"]["Name"] = [[Notification]];
 G2L["1d"]["SoundId"] = [[rbxassetid://6647898215]];
 
 -- StarterGui.Bubble.Background.Updates.Notification.Shake
 G2L["1e"] = Instance.new("Sound", G2L["1b"]);
 G2L["1e"]["PlaybackSpeed"] = 0.5;
-G2L["1e"]["Volume"] = 0.10000000149011612;
 G2L["1e"]["Name"] = [[Shake]];
 G2L["1e"]["SoundId"] = [[rbxassetid://9118145453]];
 
@@ -414,7 +414,7 @@ G2L["28"]["ZIndex"] = 2;
 G2L["28"]["BorderSizePixel"] = 0;
 G2L["28"]["ScaleType"] = Enum.ScaleType.Fit;
 G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["28"]["Image"] = [[http://www.roblox.com/asset/?id=13022875479]];
+G2L["28"]["Image"] = [[http://www.roblox.com/asset/?id=13066328838]];
 G2L["28"]["Size"] = UDim2.new(0.8965234160423279, 0, 1.0252329111099243, 0);
 G2L["28"]["Name"] = [[Image]];
 G2L["28"]["BackgroundTransparency"] = 1;
@@ -469,7 +469,7 @@ G2L["2e"]["TextTransparency"] = 0.5;
 G2L["2e"]["TextSize"] = 14;
 G2L["2e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2e"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["2e"]["Text"] = [[His name is Retard, he's the one who Requested Cancelled Animations]];
+G2L["2e"]["Text"] = [[Supporter of the Month]];
 G2L["2e"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.Bubble.Background.Updates.Images.UIAspectRatioConstraint
@@ -2498,6 +2498,7 @@ local script = G2L["3a"];
 	TextOpenInfoButton.TextLabel.TextTransparency = 1
 	TextOpenInfoButton.BackgroundTransparency = 1
 	UpdateImage.Position = UDim2.new(0.348, 0,-1.5, 0)
+	UpdateImage.Visible = false
 	
 	-- Tween Animations
 	TweenService:Create(Background, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
