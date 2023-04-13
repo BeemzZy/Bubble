@@ -2481,6 +2481,7 @@ local script = G2L["3d"];
 	local OpenInfoButton = UpdateImage.OpenInfoButton
 	local TextOpenInfoButton = OpenInfoButton.Message
 	local MeImageLabelUpdates = UpdatesFrame.Me
+	local UpdateBackgroundImage = UpdatesFrame.Background
 	
 	if RunService:IsStudio() then
 	else
@@ -2903,6 +2904,11 @@ local script = G2L["3d"];
 					TweenService:Create(OpenInfoButton.Message.TextLabel, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0), {
 						BackgroundTransparency = 1,
 						TextTransparency = 1
+					}):Play()
+					-- Background
+					TweenService:Create(UpdateBackgroundImage, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0), {
+						BackgroundTransparency = 1,
+						ImageTransparency = 1
 					}):Play()
 					-- Script
 					for i,v in pairs(UpdatesFrame.ScrollingFrame:GetChildren()) do
