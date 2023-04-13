@@ -20,8 +20,10 @@ G2L["1"]["ResetOnSpawn"] = false;
 -- StarterGui.Bubble.Background
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["2"]["BackgroundTransparency"] = 1;
 G2L["2"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 G2L["2"]["Name"] = [[Background]];
 
 -- StarterGui.Bubble.Background.Emote
@@ -2521,7 +2523,7 @@ local script = G2L["3d"];
 	
 	-- Tween Animations
 	TweenService:Create(Background, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-		Position = UDim2.new(0, 0, 0, 0)
+		Position = UDim2.new(0.5, 0, 0.5, 0)
 	}):Play()
 	
 	TweenService:Create(BlurEffect, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
@@ -2943,7 +2945,6 @@ local script = G2L["3d"];
 	-- Open/Close
 	function GUI:OpenClose ()
 		if GUI.Open then
-			GUI.Open = false
 			GUI.CanBeOpen = false
 			GUI.OpenDirectionRight = not GUI.OpenDirectionRight
 			local TweenTime = 0.9
@@ -2987,16 +2988,16 @@ local script = G2L["3d"];
 			local BackgroundTweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0)
 			local BackgroundTweenGoal = {Position = UDim2.new(-1, 0, 0, 0)}
 			if GUI.OpenDirectionRight then
-				BackgroundTweenGoal = {Position = UDim2.new(1, 0, 0, 0)}
+				BackgroundTweenGoal = {Position = UDim2.new(1.5, 0, 0, 0)}
 			end
 			local BackgroundTween = TweenService:Create(Background, BackgroundTweenInfo, BackgroundTweenGoal)
 			BackgroundTween:Play()
 	
 			task.delay(1, function()
+				GUI.Open = false
 				GUI.CanBeOpen = true
 			end)
 		else
-			GUI.Open = true
 			GUI.CanBeOpen = false
 			local TweenTime = 0.9
 	
@@ -3006,7 +3007,7 @@ local script = G2L["3d"];
 			BlurEffectTween:Play()
 	
 			local BackgroundTweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0)
-			local BackgroundTweenGoal = {Position = UDim2.new(0, 0, 0, 0)}
+			local BackgroundTweenGoal = {Position = UDim2.new(0.5, 0, 0.5, 0)}
 			local BackgroundTween = TweenService:Create(Background, BackgroundTweenInfo, BackgroundTweenGoal)
 			BackgroundTween:Play()
 	
@@ -3036,6 +3037,7 @@ local script = G2L["3d"];
 					Position = UDim2.new(0.368, 0,0.353, 0)
 				}):Play()
 				task.wait(3)
+				GUI.Open = true
 				GUI.CanBeOpen = true
 			end)
 		end
@@ -3136,11 +3138,17 @@ local script = G2L["3d"];
 	
 	print("Exploit Memory: Passed")
 	
+	local PositionSetConfirmed = true
+	
 	-- Repeats
 	while Repeats do RunService.RenderStepped:Wait()
 		-- - -- - -- Processor ::
 		if getgenv then
 			getgenv().Bubble = true
+		end
+		-- - -- - -- GUI Position ::
+		if GUI.Open then
+			
 		end
 		-- ---- - - --- - ---- --
 		if Player.CharacterAdded then
@@ -3150,13 +3158,24 @@ local script = G2L["3d"];
 		end
 		-- ---- - - --- - ---- --
 		if UpdatesFrame.Visible ~= true then
-			if FramePosition.EmoteFrame[2] ~= UDim2.new(0.334, 0,0.5, 0) then
+			if PositionSetConfirmed then
+				PositionSetConfirmed = false
 				GUI.CanBeOpen = false
 				FramePosition.EmoteFrame[2] = UDim2.new(0.334, 0,0.5, 0)
-				TweenService:Create(EmoteFrame, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
+				FramePosition.AnimateFrame[2] = UDim2.new(0.404, 0,0.5, 0)
+				TweenService:Create(EmoteFrame, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut, 0, false, 0), {
 					Position = FramePosition.EmoteFrame[2],
 				}):Play()
-				task.delay(2, function()
+				task.delay(1, function()
+					local DistanceApart = (AnimateFrame.Position - EmoteFrame.Position).X.Scale
+					FramePosition.EmoteFrame[2] = UDim2.new(0.404 + -DistanceApart, 0,0.5, 0)
+					TweenService:Create(EmoteFrame, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut, 0, false, 0), {
+						Position = FramePosition.EmoteFrame[2],
+					}):Play()
+					TweenService:Create(AnimateFrame, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut, 0, false, 0), {
+						Position = FramePosition.AnimateFrame[2],
+					}):Play()
+					task.wait(1)
 					GUI.CanBeOpen = true
 				end)
 			end
