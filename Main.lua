@@ -2576,11 +2576,15 @@ local script = G2L["3d"];
 	-- -- Load Exploit Workspace
 	
 	if getgenv then
-		if readfile then
+		if isfile("Bubble.bl") then
 			if readfile("Bubble.bl") then
 				BundleAnimationSelected = readfile("Bubble.bl")
 				BundleAnimationSelectedBefore = readfile("Bubble.bl")
 			end
+		else
+			writefile("Bubble.bl", "Default")
+			BundleAnimationSelected = readfile("Bubble.bl")
+			BundleAnimationSelectedBefore = readfile("Bubble.bl")
 		end
 	end
 	
