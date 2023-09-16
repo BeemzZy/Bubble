@@ -2475,14 +2475,6 @@ local script = G2L["2f"];
 	end
 	
 	function Remove:Animate()
-		local Stop = false
-		task.delay(4, function()
-			if not Stop then
-				Stop = true
-			end
-		end)
-		repeat wait() if Stop then break end until Player.Character:FindFirstChild("Animate")
-		Stop = true
 		if Player.Character:FindFirstChild("Animate") then
 			Player.Character:FindFirstChild("Animate"):Destroy()
 		end
