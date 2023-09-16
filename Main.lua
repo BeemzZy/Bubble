@@ -7,11 +7,11 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
 ]=]
 
--- Instances: 64 | Scripts: 1 | Modules: 3
+-- Instances: 50 | Scripts: 1 | Modules: 3
 local G2L = {};
 
 -- StarterGui.Bubble
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
 G2L["1"]["DisplayOrder"] = 999999999;
 G2L["1"]["Name"] = [[Bubble]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -20,10 +20,8 @@ G2L["1"]["ResetOnSpawn"] = false;
 -- StarterGui.Bubble.Background
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["2"]["BackgroundTransparency"] = 1;
 G2L["2"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 G2L["2"]["Name"] = [[Background]];
 
 -- StarterGui.Bubble.Background.Emote
@@ -98,501 +96,388 @@ G2L["a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fr
 
 -- StarterGui.Bubble.Background.Updates
 G2L["b"] = Instance.new("Frame", G2L["2"]);
-G2L["b"]["ZIndex"] = 2;
 G2L["b"]["BorderSizePixel"] = 0;
 G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["b"]["BackgroundTransparency"] = 0.30000001192092896;
-G2L["b"]["Size"] = UDim2.new(0.3436160981655121, 0, 0.34271523356437683, 0);
+G2L["b"]["Size"] = UDim2.new(0.16506721079349518, 0, 0.3427152931690216, 0);
 G2L["b"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["b"]["Position"] = UDim2.new(0.3645724058151245, 0, 0.32816553115844727, 0);
+G2L["b"]["Position"] = UDim2.new(0.37466704845428467, 0, 0.32816553115844727, 0);
 G2L["b"]["Name"] = [[Updates]];
 
--- StarterGui.Bubble.Background.Updates.UIGradient
-G2L["c"] = Instance.new("UIGradient", G2L["b"]);
-G2L["c"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(1.000, 0.7062499523162842)};
-G2L["c"]["Rotation"] = 90;
-G2L["c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
-
--- StarterGui.Bubble.Background.Updates.ScrollingFrame
-G2L["d"] = Instance.new("ScrollingFrame", G2L["b"]);
-G2L["d"]["Active"] = true;
-G2L["d"]["BorderSizePixel"] = 0;
-G2L["d"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
-G2L["d"]["MidImage"] = [[rbxassetid://1195495135]];
-G2L["d"]["TopImage"] = [[rbxassetid://1195495135]];
-G2L["d"]["ScrollBarImageTransparency"] = 0.699999988079071;
-G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d"]["BackgroundTransparency"] = 1;
-G2L["d"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["d"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d"]["ScrollBarThickness"] = 5;
-G2L["d"]["BottomImage"] = [[rbxassetid://1195495135]];
-
--- StarterGui.Bubble.Background.Updates.ScrollingFrame.UIListLayout
-G2L["e"] = Instance.new("UIListLayout", G2L["d"]);
-G2L["e"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
--- StarterGui.Bubble.Background.Updates.ScrollingFrame.Title
-G2L["f"] = Instance.new("TextLabel", G2L["d"]);
-G2L["f"]["TextWrapped"] = true;
-G2L["f"]["TextScaled"] = true;
-G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["f"]["TextTransparency"] = 0.5;
-G2L["f"]["TextSize"] = 14;
-G2L["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f"]["Size"] = UDim2.new(0.9850001335144043, 0, 0.09615977108478546, 0);
-G2L["f"]["Text"] = [[Updates Announcements and Notice]];
-G2L["f"]["Name"] = [[Title]];
-G2L["f"]["BackgroundTransparency"] = 1;
-G2L["f"]["Position"] = UDim2.new(-7.610368868427031e-08, 0, 0, 0);
-
--- StarterGui.Bubble.Background.Updates.ScrollingFrame.Lines
-G2L["10"] = Instance.new("TextLabel", G2L["d"]);
-G2L["10"]["TextWrapped"] = true;
-G2L["10"]["TextScaled"] = true;
-G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["10"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["10"]["TextTransparency"] = 0.5;
-G2L["10"]["TextSize"] = 14;
-G2L["10"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["10"]["Size"] = UDim2.new(0.9850001335144043, 0, 0.08076804876327515, 0);
-G2L["10"]["Text"] = [[-- -- -- -- -- -- -- -- --]];
-G2L["10"]["Name"] = [[Lines]];
-G2L["10"]["BackgroundTransparency"] = 1;
-G2L["10"]["Position"] = UDim2.new(-7.610368868427031e-08, 0, 0.09615979343652725, 0);
-
--- StarterGui.Bubble.Background.Updates.ScrollingFrame.Date
-G2L["11"] = Instance.new("TextLabel", G2L["d"]);
-G2L["11"]["TextWrapped"] = true;
-G2L["11"]["TextScaled"] = true;
-G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["11"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["11"]["TextTransparency"] = 0.5;
-G2L["11"]["TextSize"] = 14;
-G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["11"]["Size"] = UDim2.new(0.9850001335144043, 0, 0.08076804876327515, 0);
-G2L["11"]["Text"] = [[New Update Date: 4/7/2023 | 00:52]];
-G2L["11"]["Name"] = [[Date]];
-G2L["11"]["BackgroundTransparency"] = 1;
-G2L["11"]["Position"] = UDim2.new(-7.610368868427031e-08, 0, 0.176927849650383, 0);
-
--- StarterGui.Bubble.Background.Updates.ScrollingFrame.TextLabel
-G2L["12"] = Instance.new("TextLabel", G2L["d"]);
-G2L["12"]["TextWrapped"] = true;
-G2L["12"]["TextScaled"] = true;
-G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["12"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["12"]["TextTransparency"] = 0.5;
-G2L["12"]["TextSize"] = 14;
-G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["12"]["Size"] = UDim2.new(0.9850001335144043, 0, 0.08076804876327515, 0);
-G2L["12"]["Text"] = [[* Added new Animations]];
-G2L["12"]["BackgroundTransparency"] = 1;
-G2L["12"]["Position"] = UDim2.new(-7.610368868427031e-08, 0, 0.2576957643032074, 0);
-
--- StarterGui.Bubble.Background.Updates.ScrollingFrame.TextLabel
-G2L["13"] = Instance.new("TextLabel", G2L["d"]);
-G2L["13"]["TextWrapped"] = true;
-G2L["13"]["TextScaled"] = true;
-G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["13"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["13"]["TextTransparency"] = 0.5;
-G2L["13"]["TextSize"] = 14;
-G2L["13"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["13"]["Size"] = UDim2.new(0.9850001335144043, 0, 0.08076804876327515, 0);
-G2L["13"]["Text"] = [[  Added new Emotes]];
-G2L["13"]["BackgroundTransparency"] = 1;
-G2L["13"]["Position"] = UDim2.new(-7.610368868427031e-08, 0, 0.33846405148506165, 0);
-
--- StarterGui.Bubble.Background.Updates.ScrollingFrame.TextLabel
-G2L["14"] = Instance.new("TextLabel", G2L["d"]);
-G2L["14"]["TextWrapped"] = true;
-G2L["14"]["TextScaled"] = true;
-G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["14"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["14"]["TextTransparency"] = 0.5;
-G2L["14"]["TextSize"] = 14;
-G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["14"]["Size"] = UDim2.new(0.9850001335144043, 0, 0.08076804876327515, 0);
-G2L["14"]["Text"] = [[  Added SFX (Sound Effects)]];
-G2L["14"]["BackgroundTransparency"] = 1;
-G2L["14"]["Position"] = UDim2.new(-7.610368868427031e-08, 0, 0.41923201084136963, 0);
-
--- StarterGui.Bubble.Background.Updates.ScrollingFrame.Lines
-G2L["15"] = Instance.new("TextLabel", G2L["d"]);
-G2L["15"]["TextWrapped"] = true;
-G2L["15"]["TextScaled"] = true;
-G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["15"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["15"]["TextTransparency"] = 0.5;
-G2L["15"]["TextSize"] = 14;
-G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["15"]["Size"] = UDim2.new(0.9850001335144043, 0, 0.08076804876327515, 0);
-G2L["15"]["Text"] = [[-- -- -- -- -- -- -- -- --]];
-G2L["15"]["Name"] = [[Lines]];
-G2L["15"]["BackgroundTransparency"] = 1;
-G2L["15"]["Position"] = UDim2.new(-7.610368868427031e-08, 0, 0.5, 0);
-
--- StarterGui.Bubble.Background.Updates.ScrollingFrame.Title2
-G2L["16"] = Instance.new("TextLabel", G2L["d"]);
-G2L["16"]["TextWrapped"] = true;
-G2L["16"]["TextScaled"] = true;
-G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["16"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["16"]["TextTransparency"] = 0.5;
-G2L["16"]["TextSize"] = 14;
-G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["16"]["Size"] = UDim2.new(0.9850001335144043, 0, 0.09615977108478546, 0);
-G2L["16"]["Text"] = [[Coming Soon]];
-G2L["16"]["Name"] = [[Title2]];
-G2L["16"]["BackgroundTransparency"] = 1;
-G2L["16"]["Position"] = UDim2.new(-7.610368868427031e-08, 0, 0.5807679891586304, 0);
-
--- StarterGui.Bubble.Background.Updates.ScrollingFrame.Lines
-G2L["17"] = Instance.new("TextLabel", G2L["d"]);
-G2L["17"]["TextWrapped"] = true;
-G2L["17"]["TextScaled"] = true;
-G2L["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["17"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["17"]["TextTransparency"] = 0.5;
-G2L["17"]["TextSize"] = 14;
-G2L["17"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["17"]["Size"] = UDim2.new(0.9850001335144043, 0, 0.08076804876327515, 0);
-G2L["17"]["Text"] = [[-- -- -- -- -- -- -- -- --]];
-G2L["17"]["Name"] = [[Lines]];
-G2L["17"]["BackgroundTransparency"] = 1;
-G2L["17"]["Position"] = UDim2.new(-7.610368868427031e-08, 0, 0.676927924156189, 0);
-
--- StarterGui.Bubble.Background.Updates.ScrollingFrame.TextLabel
-G2L["18"] = Instance.new("TextLabel", G2L["d"]);
-G2L["18"]["TextWrapped"] = true;
-G2L["18"]["TextScaled"] = true;
-G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["18"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["18"]["TextTransparency"] = 0.5;
-G2L["18"]["TextSize"] = 14;
-G2L["18"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["18"]["Size"] = UDim2.new(0.9850001335144043, 0, 0.08076804876327515, 0);
-G2L["18"]["Text"] = [[* Adding more Emotes and Features]];
-G2L["18"]["BackgroundTransparency"] = 1;
-G2L["18"]["Position"] = UDim2.new(-7.610368868427031e-08, 0, 0.7576959133148193, 0);
-
--- StarterGui.Bubble.Background.Updates.ScrollingFrame.TextLabel
-G2L["19"] = Instance.new("TextLabel", G2L["d"]);
-G2L["19"]["TextWrapped"] = true;
-G2L["19"]["TextScaled"] = true;
-G2L["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["19"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["19"]["TextTransparency"] = 0.5;
-G2L["19"]["TextSize"] = 14;
-G2L["19"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["19"]["Size"] = UDim2.new(0.9850001335144043, 0, 0.08076804876327515, 0);
-G2L["19"]["Text"] = [[  Estimated at: 4/7/2023 to 5/7/2023]];
-G2L["19"]["BackgroundTransparency"] = 1;
-G2L["19"]["Position"] = UDim2.new(-7.610368868427031e-08, 0, 0.8384639024734497, 0);
-
--- StarterGui.Bubble.Background.Updates.ScrollingFrame.Lines
-G2L["1a"] = Instance.new("TextLabel", G2L["d"]);
-G2L["1a"]["TextWrapped"] = true;
-G2L["1a"]["TextScaled"] = true;
-G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1a"]["TextTransparency"] = 0.5;
-G2L["1a"]["TextSize"] = 14;
-G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1a"]["Size"] = UDim2.new(0.9850001335144043, 0, 0.08076804876327515, 0);
-G2L["1a"]["Text"] = [[-- -- -- -- -- -- -- -- --]];
-G2L["1a"]["Name"] = [[Lines]];
-G2L["1a"]["BackgroundTransparency"] = 1;
-G2L["1a"]["Position"] = UDim2.new(-7.610368868427031e-08, 0, 0.9192320108413696, 0);
-
--- StarterGui.Bubble.Background.Updates.Notification
-G2L["1b"] = Instance.new("ImageButton", G2L["b"]);
-G2L["1b"]["ZIndex"] = 2;
-G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(166, 59, 59);
-G2L["1b"]["LayoutOrder"] = 7;
-G2L["1b"]["Image"] = [[rbxassetid://6764432408]];
-G2L["1b"]["ImageRectSize"] = Vector2.new(50, 50);
-G2L["1b"]["Size"] = UDim2.new(0.06234414130449295, 0, 0.12077295035123825, 0);
-G2L["1b"]["Name"] = [[Notification]];
-G2L["1b"]["Rotation"] = 10;
-G2L["1b"]["ImageRectOffset"] = Vector2.new(200, 400);
-G2L["1b"]["Position"] = UDim2.new(0.9638403654098511, 0, -0.07004833221435547, 0);
-G2L["1b"]["BackgroundTransparency"] = 0.30000001192092896;
-
--- StarterGui.Bubble.Background.Updates.Notification.UICorner
-G2L["1c"] = Instance.new("UICorner", G2L["1b"]);
-
-
--- StarterGui.Bubble.Background.Updates.Notification.Notification
-G2L["1d"] = Instance.new("Sound", G2L["1b"]);
-G2L["1d"]["Volume"] = 1;
-G2L["1d"]["Name"] = [[Notification]];
-G2L["1d"]["SoundId"] = [[rbxassetid://6647898215]];
-
--- StarterGui.Bubble.Background.Updates.Notification.Shake
-G2L["1e"] = Instance.new("Sound", G2L["1b"]);
-G2L["1e"]["PlaybackSpeed"] = 0.5;
-G2L["1e"]["Name"] = [[Shake]];
-G2L["1e"]["SoundId"] = [[rbxassetid://9118145453]];
-
--- StarterGui.Bubble.Background.Updates.Notification.ImageLabel
-G2L["1f"] = Instance.new("ImageLabel", G2L["1b"]);
-G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1f"]["ImageColor3"] = Color3.fromRGB(166, 59, 59);
-G2L["1f"]["ImageTransparency"] = 1;
-G2L["1f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["1f"]["Image"] = [[rbxassetid://2763450503]];
-G2L["1f"]["BackgroundTransparency"] = 1;
-G2L["1f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
--- StarterGui.Bubble.Background.Updates.Notification.UIAspectRatioConstraint
-G2L["20"] = Instance.new("UIAspectRatioConstraint", G2L["1b"]);
-
-
--- StarterGui.Bubble.Background.Updates.Me
-G2L["21"] = Instance.new("ImageLabel", G2L["b"]);
-G2L["21"]["ZIndex"] = 2;
-G2L["21"]["BorderSizePixel"] = 0;
-G2L["21"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["21"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["21"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["21"]["Image"] = [[rbxassetid://13022373209]];
-G2L["21"]["Size"] = UDim2.new(0.2493765652179718, 0, 0.483091801404953, 0);
-G2L["21"]["Name"] = [[Me]];
-G2L["21"]["BackgroundTransparency"] = 0.6499999761581421;
-G2L["21"]["Position"] = UDim2.new(0.9950124621391296, 0, 0.4968706965446472, 0);
-
--- StarterGui.Bubble.Background.Updates.Me.UICorner
-G2L["22"] = Instance.new("UICorner", G2L["21"]);
-G2L["22"]["CornerRadius"] = UDim.new(500, 500);
-
--- StarterGui.Bubble.Background.Updates.Me.UIStroke
-G2L["23"] = Instance.new("UIStroke", G2L["21"]);
-G2L["23"]["Thickness"] = 2;
-G2L["23"]["Transparency"] = 0.44999998807907104;
-
--- StarterGui.Bubble.Background.Updates.Me.UIAspectRatioConstraint
-G2L["24"] = Instance.new("UIAspectRatioConstraint", G2L["21"]);
-
-
--- StarterGui.Bubble.Background.Updates.Images
-G2L["25"] = Instance.new("Frame", G2L["b"]);
-G2L["25"]["ZIndex"] = 2;
-G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["25"]["AnchorPoint"] = Vector2.new(0, 1);
-G2L["25"]["BackgroundTransparency"] = 0.30000001192092896;
-G2L["25"]["Size"] = UDim2.new(0.7930174469947815, 0, 0.5265700221061707, 0);
-G2L["25"]["Position"] = UDim2.new(0.3478803038597107, 0, -0.07219810038805008, 0);
-G2L["25"]["AutomaticSize"] = Enum.AutomaticSize.XY;
-G2L["25"]["Name"] = [[Images]];
-
--- StarterGui.Bubble.Background.Updates.Images.UICorner
-G2L["26"] = Instance.new("UICorner", G2L["25"]);
-
-
--- StarterGui.Bubble.Background.Updates.Images.UIGradient
-G2L["27"] = Instance.new("UIGradient", G2L["25"]);
-G2L["27"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0.2437499761581421),NumberSequenceKeypoint.new(1.000, 0.7062499523162842)};
-G2L["27"]["Rotation"] = 90;
-G2L["27"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
-
--- StarterGui.Bubble.Background.Updates.Images.Image
-G2L["28"] = Instance.new("ImageLabel", G2L["25"]);
-G2L["28"]["ZIndex"] = 2;
-G2L["28"]["BorderSizePixel"] = 0;
-G2L["28"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["28"]["Image"] = [[http://www.roblox.com/asset/?id=13066328838]];
-G2L["28"]["Size"] = UDim2.new(0.8965234160423279, 0, 1.0252329111099243, 0);
-G2L["28"]["Name"] = [[Image]];
-G2L["28"]["BackgroundTransparency"] = 1;
-G2L["28"]["Position"] = UDim2.new(0.052113935351371765, 0, 0.009901206940412521, 0);
-
--- StarterGui.Bubble.Background.Updates.Images.Image.UICorner
-G2L["29"] = Instance.new("UICorner", G2L["28"]);
-
-
--- StarterGui.Bubble.Background.Updates.Images.OpenInfoButton
-G2L["2a"] = Instance.new("TextButton", G2L["25"]);
-G2L["2a"]["TextWrapped"] = true;
-G2L["2a"]["ZIndex"] = 2;
-G2L["2a"]["TextScaled"] = true;
-G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2a"]["TextSize"] = 14;
-G2L["2a"]["FontFace"] = Font.new([[rbxassetid://11322590111]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2a"]["Size"] = UDim2.new(0.16247670352458954, 0, 0.44314607977867126, 0);
-G2L["2a"]["Name"] = [[OpenInfoButton]];
-G2L["2a"]["Text"] = [[>]];
-G2L["2a"]["Position"] = UDim2.new(0.934846043586731, 0, 0.2924764156341553, 0);
-G2L["2a"]["BackgroundTransparency"] = 1;
-
--- StarterGui.Bubble.Background.Updates.Images.OpenInfoButton.Message
-G2L["2b"] = Instance.new("Frame", G2L["2a"]);
-G2L["2b"]["ZIndex"] = 2;
-G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2b"]["BackgroundTransparency"] = 0.30000001192092896;
-G2L["2b"]["Size"] = UDim2.new(8.38926887512207, 0, 1.9761830568313599, 0);
-G2L["2b"]["Position"] = UDim2.new(1.1877758502960205, 0, -0.49273812770843506, 0);
-G2L["2b"]["Name"] = [[Message]];
-
--- StarterGui.Bubble.Background.Updates.Images.OpenInfoButton.Message.UIGradient
-G2L["2c"] = Instance.new("UIGradient", G2L["2b"]);
-G2L["2c"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0.2437499761581421),NumberSequenceKeypoint.new(1.000, 0.7062499523162842)};
-G2L["2c"]["Rotation"] = 90;
-G2L["2c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
-
--- StarterGui.Bubble.Background.Updates.Images.OpenInfoButton.Message.UICorner
-G2L["2d"] = Instance.new("UICorner", G2L["2b"]);
-
-
--- StarterGui.Bubble.Background.Updates.Images.OpenInfoButton.Message.TextLabel
-G2L["2e"] = Instance.new("TextLabel", G2L["2b"]);
-G2L["2e"]["TextWrapped"] = true;
-G2L["2e"]["RichText"] = true;
-G2L["2e"]["TextScaled"] = true;
-G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2e"]["TextTransparency"] = 0.5;
-G2L["2e"]["TextSize"] = 14;
-G2L["2e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2e"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["2e"]["Text"] = [[Supporter of the Month]];
-G2L["2e"]["BackgroundTransparency"] = 1;
-
--- StarterGui.Bubble.Background.Updates.Images.UIAspectRatioConstraint
-G2L["2f"] = Instance.new("UIAspectRatioConstraint", G2L["25"]);
-
-
 -- StarterGui.Bubble.Background.Updates.UIStroke
-G2L["30"] = Instance.new("UIStroke", G2L["b"]);
-G2L["30"]["Color"] = Color3.fromRGB(255, 255, 255);
-G2L["30"]["Thickness"] = 3.9000000953674316;
-G2L["30"]["Transparency"] = 0.30000001192092896;
+G2L["c"] = Instance.new("UIStroke", G2L["b"]);
+G2L["c"]["Color"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["Thickness"] = 3.9000000953674316;
+G2L["c"]["Transparency"] = 0.30000001192092896;
 
 -- StarterGui.Bubble.Background.Updates.UIStroke.UIGradient
-G2L["31"] = Instance.new("UIGradient", G2L["30"]);
-G2L["31"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(1.000, 0.7062499523162842)};
-G2L["31"]["Rotation"] = 90;
-G2L["31"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+G2L["d"] = Instance.new("UIGradient", G2L["c"]);
+G2L["d"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(1.000, 0.7062499523162842)};
+G2L["d"]["Rotation"] = 90;
+G2L["d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
--- StarterGui.Bubble.Background.Updates.Background
-G2L["32"] = Instance.new("ImageLabel", G2L["b"]);
-G2L["32"]["ZIndex"] = 0;
-G2L["32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["32"]["ImageTransparency"] = 0.25;
-G2L["32"]["Image"] = [[http://www.roblox.com/asset/?id=13114306907]];
-G2L["32"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["32"]["Name"] = [[Background]];
-G2L["32"]["BackgroundTransparency"] = 1;
+-- StarterGui.Bubble.Background.Updates.UIGradient
+G2L["e"] = Instance.new("UIGradient", G2L["b"]);
+G2L["e"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(1.000, 0.7062499523162842)};
+G2L["e"]["Rotation"] = 90;
+G2L["e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
--- StarterGui.Bubble.Background.Updates.Background.UICorner
-G2L["33"] = Instance.new("UICorner", G2L["32"]);
+-- StarterGui.Bubble.Background.Updates.ImageLabel
+G2L["f"] = Instance.new("ImageLabel", G2L["b"]);
+G2L["f"]["ZIndex"] = 2;
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["f"]["Image"] = [[rbxassetid://13022373209]];
+G2L["f"]["Size"] = UDim2.new(0.6889262795448303, 0, 0.6901991367340088, 0);
+G2L["f"]["BackgroundTransparency"] = 0.6499999761581421;
+G2L["f"]["Position"] = UDim2.new(0.4935310184955597, 0, 0.4738950729370117, 0);
 
+-- StarterGui.Bubble.Background.Updates.ImageLabel.UICorner
+G2L["10"] = Instance.new("UICorner", G2L["f"]);
+G2L["10"]["CornerRadius"] = UDim.new(500, 500);
+
+-- StarterGui.Bubble.Background.Updates.ImageLabel.UIAspectRatioConstraint
+G2L["11"] = Instance.new("UIAspectRatioConstraint", G2L["f"]);
+
+
+-- StarterGui.Bubble.Background.Updates.ImageLabel.UIStroke
+G2L["12"] = Instance.new("UIStroke", G2L["f"]);
+G2L["12"]["Thickness"] = 2;
+G2L["12"]["Transparency"] = 0.44999998807907104;
+
+-- StarterGui.Bubble.Background.Updates.Version
+G2L["13"] = Instance.new("TextLabel", G2L["b"]);
+G2L["13"]["TextWrapped"] = true;
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["TextScaled"] = true;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+G2L["13"]["TextTransparency"] = 0.41999998688697815;
+G2L["13"]["TextSize"] = 14;
+G2L["13"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["13"]["Size"] = UDim2.new(0.7644338607788086, 0, 0.09877938032150269, 0);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Text"] = [[v0.2]];
+G2L["13"]["Name"] = [[Version]];
+G2L["13"]["BackgroundTransparency"] = 1;
+G2L["13"]["Position"] = UDim2.new(0.49688202142715454, 0, 0.046341076493263245, 0);
+
+-- StarterGui.Bubble.Background.Updates.Version.UIAspectRatioConstraint
+G2L["14"] = Instance.new("UIAspectRatioConstraint", G2L["13"]);
+G2L["14"]["AspectRatio"] = 7.7530975341796875;
+
+-- StarterGui.Bubble.Background.Updates.UpdateNotice
+G2L["15"] = Instance.new("Frame", G2L["b"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["BackgroundTransparency"] = 0.30000001192092896;
+G2L["15"]["Size"] = UDim2.new(0.9983000159263611, 0, 1.0011483430862427, 0);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["15"]["Position"] = UDim2.new(1.0460044145584106, 0, -0.001148430397734046, 0);
+G2L["15"]["Name"] = [[UpdateNotice]];
+
+-- StarterGui.Bubble.Background.Updates.UpdateNotice.UIStroke
+G2L["16"] = Instance.new("UIStroke", G2L["15"]);
+G2L["16"]["Color"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["Thickness"] = 3.9000000953674316;
+G2L["16"]["Transparency"] = 0.30000001192092896;
+
+-- StarterGui.Bubble.Background.Updates.UpdateNotice.UIStroke.UIGradient
+G2L["17"] = Instance.new("UIGradient", G2L["16"]);
+G2L["17"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(1.000, 0.7062499523162842)};
+G2L["17"]["Rotation"] = 90;
+G2L["17"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+
+-- StarterGui.Bubble.Background.Updates.UpdateNotice.UIGradient
+G2L["18"] = Instance.new("UIGradient", G2L["15"]);
+G2L["18"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(1.000, 0.7062499523162842)};
+G2L["18"]["Rotation"] = 90;
+G2L["18"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+
+-- StarterGui.Bubble.Background.Updates.UpdateNotice.ScrollingFrame
+G2L["19"] = Instance.new("ScrollingFrame", G2L["15"]);
+G2L["19"]["Active"] = true;
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["ScrollBarImageTransparency"] = 1;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["19"]["BackgroundTransparency"] = 1;
+G2L["19"]["Size"] = UDim2.new(0.9993212819099426, 0, 0.9982827305793762, 0);
+G2L["19"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["ScrollBarThickness"] = 0;
+
+-- StarterGui.Bubble.Background.Updates.UpdateNotice.ScrollingFrame.TextLabel
+G2L["1a"] = Instance.new("TextLabel", G2L["19"]);
+G2L["1a"]["TextWrapped"] = true;
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["TextScaled"] = true;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["1a"]["TextTransparency"] = 0.30000001192092896;
+G2L["1a"]["TextSize"] = 14;
+G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["Size"] = UDim2.new(0.9992850422859192, 0, 0.03831418231129646, 0);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Text"] = [[Updates at v0.2]];
+G2L["1a"]["BackgroundTransparency"] = 1;
+G2L["1a"]["Position"] = UDim2.new(0, 0, -5.8462799046310465e-08, 0);
+
+-- StarterGui.Bubble.Background.Updates.UpdateNotice.ScrollingFrame.UIListLayout
+G2L["1b"] = Instance.new("UIListLayout", G2L["19"]);
+G2L["1b"]["Padding"] = UDim.new(0.014999999664723873, 0);
+G2L["1b"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+-- StarterGui.Bubble.Background.Updates.UpdateNotice.ScrollingFrame.TextLabel
+G2L["1c"] = Instance.new("TextLabel", G2L["19"]);
+G2L["1c"]["TextWrapped"] = true;
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["TextScaled"] = true;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Light, Enum.FontStyle.Normal);
+G2L["1c"]["TextTransparency"] = 0.30000001192092896;
+G2L["1c"]["TextSize"] = 14;
+G2L["1c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["Size"] = UDim2.new(0.9992850422859192, 0, 0.03831418231129646, 0);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Text"] = [[• Bug Fixes:]];
+G2L["1c"]["BackgroundTransparency"] = 1;
+G2L["1c"]["Position"] = UDim2.new(0, 0, -5.8462799046310465e-08, 0);
+
+-- StarterGui.Bubble.Background.Updates.UpdateNotice.ScrollingFrame.TextLabel
+G2L["1d"] = Instance.new("TextLabel", G2L["19"]);
+G2L["1d"]["TextWrapped"] = true;
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["1d"]["TextScaled"] = true;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.ExtraLight, Enum.FontStyle.Normal);
+G2L["1d"]["TextTransparency"] = 0.30000001192092896;
+G2L["1d"]["TextSize"] = 14;
+G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["Size"] = UDim2.new(0.9992850422859192, 0, 0.06625721603631973, 0);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Text"] = [[Animation Malfunction at Respawn.]];
+G2L["1d"]["BackgroundTransparency"] = 1;
+G2L["1d"]["Position"] = UDim2.new(0, 0, 0.15352044999599457, 0);
+
+-- StarterGui.Bubble.Background.Updates.UpdateNotice.ScrollingFrame.TextLabel
+G2L["1e"] = Instance.new("TextLabel", G2L["19"]);
+G2L["1e"]["TextWrapped"] = true;
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["TextScaled"] = true;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Light, Enum.FontStyle.Normal);
+G2L["1e"]["TextTransparency"] = 0.30000001192092896;
+G2L["1e"]["TextSize"] = 14;
+G2L["1e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["Size"] = UDim2.new(0.9992850422859192, 0, 0.03831418231129646, 0);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["Text"] = [[• GUI Design:]];
+G2L["1e"]["BackgroundTransparency"] = 1;
+G2L["1e"]["Position"] = UDim2.new(0, 0, -5.8462799046310465e-08, 0);
+
+-- StarterGui.Bubble.Background.Updates.UpdateNotice.ScrollingFrame.TextLabel
+G2L["1f"] = Instance.new("TextLabel", G2L["19"]);
+G2L["1f"]["TextWrapped"] = true;
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["1f"]["TextScaled"] = true;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.ExtraLight, Enum.FontStyle.Normal);
+G2L["1f"]["TextTransparency"] = 0.30000001192092896;
+G2L["1f"]["TextSize"] = 14;
+G2L["1f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["Size"] = UDim2.new(0.9992850422859192, 0, 0.06625721603631973, 0);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Text"] = [[New Position of Design, and Cleaner.]];
+G2L["1f"]["BackgroundTransparency"] = 1;
+G2L["1f"]["Position"] = UDim2.new(0, 0, 0.15352044999599457, 0);
+
+-- StarterGui.Bubble.Background.Updates.UpdateNotice.ScrollingFrame.TextLabel
+G2L["20"] = Instance.new("TextLabel", G2L["19"]);
+G2L["20"]["TextWrapped"] = true;
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["TextScaled"] = true;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["20"]["TextTransparency"] = 0.30000001192092896;
+G2L["20"]["TextSize"] = 14;
+G2L["20"]["TextColor3"] = Color3.fromRGB(255, 117, 117);
+G2L["20"]["Size"] = UDim2.new(0.9992850422859192, 0, 0.03831418231129646, 0);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["Text"] = [[- • Coming Soon 📢 • -]];
+G2L["20"]["BackgroundTransparency"] = 1;
+G2L["20"]["Position"] = UDim2.new(0, 0, -5.8462799046310465e-08, 0);
+
+-- StarterGui.Bubble.Background.Updates.UpdateNotice.ScrollingFrame.TextLabel
+G2L["21"] = Instance.new("TextLabel", G2L["19"]);
+G2L["21"]["TextWrapped"] = true;
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["21"]["TextScaled"] = true;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["21"]["TextTransparency"] = 0.30000001192092896;
+G2L["21"]["TextSize"] = 14;
+G2L["21"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["Size"] = UDim2.new(0.9992850422859192, 0, 0.04078833386301994, 0);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["Text"] = [[More Emotes 💃]];
+G2L["21"]["BackgroundTransparency"] = 1;
+G2L["21"]["Position"] = UDim2.new(0, 0, 0.3630230724811554, 0);
+
+-- StarterGui.Bubble.Background.Updates.UpdateNotice.ScrollingFrame.TextLabel
+G2L["22"] = Instance.new("TextLabel", G2L["19"]);
+G2L["22"]["TextWrapped"] = true;
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["22"]["TextScaled"] = true;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["22"]["TextTransparency"] = 0.30000001192092896;
+G2L["22"]["TextSize"] = 14;
+G2L["22"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["Size"] = UDim2.new(0.9992850422859192, 0, 0.04078833386301994, 0);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Text"] = [[Settings ⚙️]];
+G2L["22"]["BackgroundTransparency"] = 1;
+G2L["22"]["Position"] = UDim2.new(0, 0, 0.3630230724811554, 0);
+
+-- StarterGui.Bubble.Background.Updates.Title
+G2L["23"] = Instance.new("TextLabel", G2L["b"]);
+G2L["23"]["TextWrapped"] = true;
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["TextScaled"] = true;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+G2L["23"]["TextTransparency"] = 0.1899999976158142;
+G2L["23"]["TextSize"] = 14;
+G2L["23"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["23"]["Size"] = UDim2.new(0.7644338607788086, 0, 0.09112092107534409, 0);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["Text"] = [[Bubble]];
+G2L["23"]["Name"] = [[Title]];
+G2L["23"]["BackgroundTransparency"] = 1;
+G2L["23"]["Position"] = UDim2.new(0.4968821108341217, 0, 0.8887718915939331, 0);
+
+-- StarterGui.Bubble.Background.Updates.Title.UIAspectRatioConstraint
+G2L["24"] = Instance.new("UIAspectRatioConstraint", G2L["23"]);
+G2L["24"]["AspectRatio"] = 7.7530975341796875;
+
+-- StarterGui.Bubble.Background.Updates.By
+G2L["25"] = Instance.new("TextLabel", G2L["b"]);
+G2L["25"]["TextWrapped"] = true;
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["TextScaled"] = true;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+G2L["25"]["TextTransparency"] = 0.41999998688697815;
+G2L["25"]["TextSize"] = 14;
+G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["25"]["Size"] = UDim2.new(0.7051666975021362, 0, 0.06871628016233444, 0);
+G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25"]["Text"] = [[By: BeemzZy]];
+G2L["25"]["Name"] = [[By]];
+G2L["25"]["BackgroundTransparency"] = 1;
+G2L["25"]["Position"] = UDim2.new(0.496881902217865, 0, 0.9656418561935425, 0);
+
+-- StarterGui.Bubble.Background.Updates.By.UIAspectRatioConstraint
+G2L["26"] = Instance.new("UIAspectRatioConstraint", G2L["25"]);
+G2L["26"]["AspectRatio"] = 7.7530975341796875;
 
 -- StarterGui.Bubble.Background.Animate
-G2L["34"] = Instance.new("Frame", G2L["2"]);
-G2L["34"]["BorderSizePixel"] = 0;
-G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["34"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["34"]["BackgroundTransparency"] = 0.30000001192092896;
-G2L["34"]["Size"] = UDim2.new(0.2370000034570694, 0, 0.414000004529953, 0);
-G2L["34"]["Position"] = UDim2.new(0.13200515508651733, 0, 0.5, 0);
-G2L["34"]["AutomaticSize"] = Enum.AutomaticSize.Y;
-G2L["34"]["Name"] = [[Animate]];
+G2L["27"] = Instance.new("Frame", G2L["2"]);
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["27"]["BackgroundTransparency"] = 0.30000001192092896;
+G2L["27"]["Size"] = UDim2.new(0.2370000034570694, 0, 0.414000004529953, 0);
+G2L["27"]["Position"] = UDim2.new(0.13200515508651733, 0, 0.5, 0);
+G2L["27"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["27"]["Name"] = [[Animate]];
 
 -- StarterGui.Bubble.Background.Animate.UIGradient
-G2L["35"] = Instance.new("UIGradient", G2L["34"]);
-G2L["35"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(1.000, 0.7062499523162842)};
-G2L["35"]["Rotation"] = 90;
-G2L["35"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+G2L["28"] = Instance.new("UIGradient", G2L["27"]);
+G2L["28"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(1.000, 0.7062499523162842)};
+G2L["28"]["Rotation"] = 90;
+G2L["28"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 -- StarterGui.Bubble.Background.Animate.ScrollingFrame
-G2L["36"] = Instance.new("ScrollingFrame", G2L["34"]);
-G2L["36"]["Active"] = true;
-G2L["36"]["BorderSizePixel"] = 0;
-G2L["36"]["CanvasSize"] = UDim2.new(0, 0, 3.5, 0);
-G2L["36"]["TopImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
-G2L["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["36"]["VerticalScrollBarPosition"] = Enum.VerticalScrollBarPosition.Left;
-G2L["36"]["AnchorPoint"] = Vector2.new(0.5, 0);
-G2L["36"]["BackgroundTransparency"] = 1;
-G2L["36"]["Size"] = UDim2.new(0.9419999718666077, 0, 1, 0);
-G2L["36"]["ScrollBarImageColor3"] = Color3.fromRGB(148, 153, 255);
-G2L["36"]["ScrollBarThickness"] = 0;
-G2L["36"]["Position"] = UDim2.new(0.5, 0, 0, 0);
-G2L["36"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+G2L["29"] = Instance.new("ScrollingFrame", G2L["27"]);
+G2L["29"]["Active"] = true;
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["CanvasSize"] = UDim2.new(0, 0, 3.5, 0);
+G2L["29"]["TopImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["VerticalScrollBarPosition"] = Enum.VerticalScrollBarPosition.Left;
+G2L["29"]["AnchorPoint"] = Vector2.new(0.5, 0);
+G2L["29"]["BackgroundTransparency"] = 1;
+G2L["29"]["Size"] = UDim2.new(0.9419999718666077, 0, 1, 0);
+G2L["29"]["ScrollBarImageColor3"] = Color3.fromRGB(148, 153, 255);
+G2L["29"]["ScrollBarThickness"] = 0;
+G2L["29"]["Position"] = UDim2.new(0.5, 0, 0, 0);
+G2L["29"]["AutomaticSize"] = Enum.AutomaticSize.XY;
 
 -- StarterGui.Bubble.Background.Animate.ScrollingFrame.UIListLayout
-G2L["37"] = Instance.new("UIListLayout", G2L["36"]);
-G2L["37"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["37"]["Padding"] = UDim.new(0.009999999776482582, 0);
-G2L["37"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["2a"] = Instance.new("UIListLayout", G2L["29"]);
+G2L["2a"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["2a"]["Padding"] = UDim.new(0.009999999776482582, 0);
+G2L["2a"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 -- StarterGui.Bubble.Background.Animate.ScrollingFrame.AnimationButton
-G2L["38"] = Instance.new("TextButton", G2L["36"]);
-G2L["38"]["TextWrapped"] = true;
-G2L["38"]["TextScaled"] = true;
-G2L["38"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
-G2L["38"]["TextSize"] = 14;
-G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.ExtraLight, Enum.FontStyle.Normal);
-G2L["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["38"]["Visible"] = false;
-G2L["38"]["Size"] = UDim2.new(0.7689999938011169, 0, 0.029999999329447746, 0);
-G2L["38"]["Name"] = [[AnimationButton]];
-G2L["38"]["Text"] = [[Default]];
-G2L["38"]["Position"] = UDim2.new(0.11571409553289413, 0, 6.622312298532051e-08, 0);
-G2L["38"]["BackgroundTransparency"] = 0.6000000238418579;
+G2L["2b"] = Instance.new("TextButton", G2L["29"]);
+G2L["2b"]["TextWrapped"] = true;
+G2L["2b"]["TextScaled"] = true;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["2b"]["TextSize"] = 14;
+G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.ExtraLight, Enum.FontStyle.Normal);
+G2L["2b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["Visible"] = false;
+G2L["2b"]["Size"] = UDim2.new(0.7689999938011169, 0, 0.029999999329447746, 0);
+G2L["2b"]["Name"] = [[AnimationButton]];
+G2L["2b"]["Text"] = [[Default]];
+G2L["2b"]["Position"] = UDim2.new(0.11571409553289413, 0, 6.622312298532051e-08, 0);
+G2L["2b"]["BackgroundTransparency"] = 0.6000000238418579;
 
 -- StarterGui.Bubble.Background.Animate.ScrollingFrame.AnimationButton.UICorner
-G2L["39"] = Instance.new("UICorner", G2L["38"]);
-G2L["39"]["CornerRadius"] = UDim.new(0.20000000298023224, 2);
+G2L["2c"] = Instance.new("UICorner", G2L["2b"]);
+G2L["2c"]["CornerRadius"] = UDim.new(0.20000000298023224, 2);
 
 -- StarterGui.Bubble.Background.Animate.UIStroke
-G2L["3a"] = Instance.new("UIStroke", G2L["34"]);
-G2L["3a"]["Color"] = Color3.fromRGB(255, 255, 255);
-G2L["3a"]["Thickness"] = 3.9000000953674316;
-G2L["3a"]["Transparency"] = 0.30000001192092896;
+G2L["2d"] = Instance.new("UIStroke", G2L["27"]);
+G2L["2d"]["Color"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["Thickness"] = 3.9000000953674316;
+G2L["2d"]["Transparency"] = 0.30000001192092896;
 
 -- StarterGui.Bubble.Background.Animate.UIStroke.UIGradient
-G2L["3b"] = Instance.new("UIGradient", G2L["3a"]);
-G2L["3b"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(1.000, 0.7062499523162842)};
-G2L["3b"]["Rotation"] = 90;
-G2L["3b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
-
--- StarterGui.Bubble.Background.UIAspectRatioConstraint
-G2L["3c"] = Instance.new("UIAspectRatioConstraint", G2L["2"]);
-G2L["3c"]["AspectRatio"] = 1.7768518924713135;
+G2L["2e"] = Instance.new("UIGradient", G2L["2d"]);
+G2L["2e"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(1.000, 0.7062499523162842)};
+G2L["2e"]["Rotation"] = 90;
+G2L["2e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 -- StarterGui.Bubble.Main
-G2L["3d"] = Instance.new("LocalScript", G2L["1"]);
-G2L["3d"]["Name"] = [[Main]];
+G2L["2f"] = Instance.new("LocalScript", G2L["1"]);
+G2L["2f"]["Name"] = [[Main]];
 
 -- StarterGui.Bubble.OtherModule
-G2L["3e"] = Instance.new("ModuleScript", G2L["1"]);
-G2L["3e"]["Name"] = [[OtherModule]];
+G2L["30"] = Instance.new("ModuleScript", G2L["1"]);
+G2L["30"]["Name"] = [[OtherModule]];
 
 -- StarterGui.Bubble.AnimationPackages
-G2L["3f"] = Instance.new("ModuleScript", G2L["1"]);
-G2L["3f"]["Name"] = [[AnimationPackages]];
+G2L["31"] = Instance.new("ModuleScript", G2L["1"]);
+G2L["31"]["Name"] = [[AnimationPackages]];
 
 -- StarterGui.Bubble.Emotes
-G2L["40"] = Instance.new("ModuleScript", G2L["1"]);
-G2L["40"]["Name"] = [[Emotes]];
+G2L["32"] = Instance.new("ModuleScript", G2L["1"]);
+G2L["32"]["Name"] = [[Emotes]];
 
 -- Require G2L wrapper
 local G2L_REQUIRE = require;
@@ -609,9 +494,9 @@ local function require(Module:ModuleScript)
     return G2L_REQUIRE(Module);
 end
 
-G2L_MODULES[G2L["3e"]] = {
+G2L_MODULES[G2L["30"]] = {
 Closure = function()
-    local script = G2L["3e"];
+    local script = G2L["30"];
 local other = {}
 
 local afterName = ""
@@ -1670,9 +1555,9 @@ end
 return other
 end;
 };
-G2L_MODULES[G2L["3f"]] = {
+G2L_MODULES[G2L["31"]] = {
 Closure = function()
-    local script = G2L["3f"];
+    local script = G2L["31"];
 return {
 	["Default"] = {
 		["climb"] = {
@@ -2407,9 +2292,9 @@ return {
 }
 end;
 };
-G2L_MODULES[G2L["40"]] = {
+G2L_MODULES[G2L["32"]] = {
 Closure = function()
-    local script = G2L["40"];
+    local script = G2L["32"];
 return {
 	["Bbdance"] = "rbxassetid://4265725525",
 	["Cower"] = "rbxassetid://4940563117",
@@ -2446,8 +2331,8 @@ return {
 end;
 };
 -- StarterGui.Bubble.Main
-local function C_3d()
-local script = G2L["3d"];
+local function C_2f()
+local script = G2L["2f"];
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -2463,7 +2348,7 @@ local script = G2L["3d"];
 	repeat wait() until Player.CharacterAdded
 	if Player.Character:WaitForChild("Humanoid").RigType == Enum.HumanoidRigType.R6 then script.Parent:Remove() return end
 	if Player.Character:WaitForChild("Animate") then else script.Parent:Remove() return end
-	if getgenv then if getgenv().Bubble then script.Parent:Remove() warn("Bubble is already been Executed.") return else getgenv().Bubble = true end end
+	if getgenv then if getgenv().Bubble then script.Parent:Remove() return else getgenv().Bubble = true end end
 	
 	print("Needs: Passed.")
 	
@@ -2478,12 +2363,6 @@ local script = G2L["3d"];
 	local ScrollingEmoteFrame = EmoteFrame.ScrollingFrame
 	local EmoteButton = ScrollingEmoteFrame.EmoteButton
 	local UpdatesFrame = Background.Updates
-	local NotificationButton = UpdatesFrame.Notification
-	local UpdateImage = UpdatesFrame.Images
-	local OpenInfoButton = UpdateImage.OpenInfoButton
-	local TextOpenInfoButton = OpenInfoButton.Message
-	local MeImageLabelUpdates = UpdatesFrame.Me
-	local UpdateBackgroundImage = UpdatesFrame.Background
 	
 	if RunService:IsStudio() then
 	else
@@ -2509,21 +2388,16 @@ local script = G2L["3d"];
 		}
 	}
 	
-	UpdatesFrame.Position = UDim2.new(0.368, 0, -1, 0)
+	UpdatesFrame.Position =  UDim2.new(UpdatesFrame.Position.X.Scale, 0, -1, 0)
 	Background.Position = UDim2.new(-1, 0, 0, 0)
 	AnimateFrame.Position = FramePosition.AnimateFrame[1]
 	EmoteFrame.Position = FramePosition.EmoteFrame[1]
 	EmoteFrame.BackgroundTransparency = 1
 	EmoteFrame.UIStroke.Transparency = 1
-	TextOpenInfoButton.Size = UDim2.new(0, 0, TextOpenInfoButton.Size.Y.Scale, 0)
-	TextOpenInfoButton.TextLabel.TextTransparency = 1
-	TextOpenInfoButton.BackgroundTransparency = 1
-	UpdateImage.Position = UDim2.new(0.348, 0,-1.5, 0)
-	UpdateImage.Visible = false
 	
 	-- Tween Animations
 	TweenService:Create(Background, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-		Position = UDim2.new(0.5, 0, 0.5, 0)
+		Position = UDim2.new(0, 0, 0, 0)
 	}):Play()
 	
 	TweenService:Create(BlurEffect, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
@@ -2558,11 +2432,7 @@ local script = G2L["3d"];
 			NotificationButtonCancelCount = {
 				Now = 0,
 				To = 3
-			},
-			OpenInfoButtonOpened = false,
-			CanOpenInfoButtonOpened = true,
-			MeImageLabelUpdatesBoolean = false,
-			MeImageLabelUpdatesNeedTime = true
+			}
 		},
 		Animate = {},
 		Emote = {}
@@ -2576,15 +2446,11 @@ local script = G2L["3d"];
 	-- -- Load Exploit Workspace
 	
 	if getgenv then
-		if isfile("Bubble.bl") then
+		if readfile then
 			if readfile("Bubble.bl") then
 				BundleAnimationSelected = readfile("Bubble.bl")
 				BundleAnimationSelectedBefore = readfile("Bubble.bl")
 			end
-		else
-			writefile("Bubble.bl", "Default")
-			BundleAnimationSelected = readfile("Bubble.bl")
-			BundleAnimationSelectedBefore = readfile("Bubble.bl")
 		end
 	end
 	
@@ -2609,19 +2475,29 @@ local script = G2L["3d"];
 	end
 	
 	function Remove:Animate()
+		local Stop = false
+		task.delay(4, function()
+			if not Stop then
+				Stop = true
+			end
+		end)
+		repeat wait() if Stop then break end until Player.Character:FindFirstChild("Animate")
+		Stop = true
 		if Player.Character:FindFirstChild("Animate") then
-			Player.Character:FindFirstChild("Animate"):Remove()
+			Player.Character:FindFirstChild("Animate"):Destroy()
 		end
 	end
 	
 	function Create:Animate()
 		Remove.Animate()
-		if Player.Character:FindFirstChild(AnimateName) then
-			if BundleAnimationSelected == BundleAnimationSelectedBefore then
-			else
-				Change:Animate(BundleAnimationSelectedBefore)
+		local function SetBeforeAnimations ()
+			if Player.Character:FindFirstChild(AnimateName) then
+				if BundleAnimationSelected == BundleAnimationSelectedBefore then
+				else
+					Change:Animate(BundleAnimationSelectedBefore)
+				end
+				return
 			end
-			return
 		end
 		
 		BundleAnimationSelected = "Default"
@@ -2630,6 +2506,8 @@ local script = G2L["3d"];
 			local Bubble_Animate = Instance.new("Configuration", Player.Character)
 			Bubble_Animate.Name = AnimateName
 			require(ScreenGui.OtherModule):MakeAnimate(Bubble_Animate)
+			
+			SetBeforeAnimations()
 		end
 		task.spawn(CreateAnimate)
 	end
@@ -2791,164 +2669,10 @@ local script = G2L["3d"];
 		end
 	end
 	
-	-- OpenInfoButton
-	local function OpenInfo ()
-		if GUI.UpdateFrame.CanOpenInfoButtonOpened then
-			if GUI.UpdateFrame.OpenInfoButtonOpened then
-				GUI.UpdateFrame.OpenInfoButtonOpened = false
-				GUI.UpdateFrame.CanOpenInfoButtonOpened = false
-				TweenService:Create(TextOpenInfoButton.TextLabel, TweenInfo.new(0.8, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-					TextTransparency = 1
-				}):Play()
-				task.delay(0.6, function()
-					TweenService:Create(TextOpenInfoButton, TweenInfo.new(0.8, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-						Size = UDim2.new(0, 0,TextOpenInfoButton.Size.Y.Scale, 0),
-						BackgroundTransparency = 1
-					}):Play()
-					task.wait(0.8)
-					GUI.UpdateFrame.CanOpenInfoButtonOpened = true
-				end)
-			else
-				GUI.UpdateFrame.OpenInfoButtonOpened = true
-				GUI.UpdateFrame.CanOpenInfoButtonOpened = false
-				TweenService:Create(TextOpenInfoButton, TweenInfo.new(0.8, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-					Size = UDim2.new(8.389, 0,TextOpenInfoButton.Size.Y.Scale, 0),
-					BackgroundTransparency = 0.3
-				}):Play()
-				task.delay(0.6, function()
-					TweenService:Create(TextOpenInfoButton.TextLabel, TweenInfo.new(0.8, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-						TextTransparency = 0.5
-					}):Play()
-					task.wait(0.8)
-					GUI.UpdateFrame.CanOpenInfoButtonOpened = true
-				end)
-			end
-		end
-	end
-	OpenInfoButton.MouseButton1Click:Connect(OpenInfo)
-	
-	-- Me Image Label
-	
-	MeImageLabelUpdates.InputBegan:Connect(function(input)
-		if GUI.UpdateFrame.MeImageLabelUpdatesNeedTime then
-			if input.UserInputType == Enum.UserInputType.MouseButton1 then
-				if GUI.UpdateFrame.MeImageLabelUpdatesBoolean then
-					GUI.UpdateFrame.MeImageLabelUpdatesNeedTime = false
-					GUI.UpdateFrame.MeImageLabelUpdatesBoolean = false
-					TweenService:Create(UpdateImage, TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut), {
-						Position = UDim2.new(0.348, 0,-1.5, 0)
-					}):Play()
-					task.delay(1, function()
-						UpdateImage.Visible = false
-						GUI.UpdateFrame.MeImageLabelUpdatesNeedTime = true
-					end)
-				else
-					GUI.UpdateFrame.MeImageLabelUpdatesNeedTime = false
-					GUI.UpdateFrame.MeImageLabelUpdatesBoolean = true
-					UpdateImage.Visible = true
-					TweenService:Create(UpdateImage, TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut), {
-						Position = UDim2.new(0.348, 0,-0.072, 0)
-					}):Play()
-					task.delay(1, function()
-						GUI.UpdateFrame.MeImageLabelUpdatesNeedTime = true
-					end)
-				end
-			end
-		end
-	end)
-	
-	-- Notification Button
-	NotificationButton.MouseButton1Click:Connect(function()
-		if GUI.UpdateFrame.NotificationButtonBoolean == false then
-			GUI.UpdateFrame.NotificationButtonBoolean = true
-			GUI.UpdateFrame.NotificationButtonCancelCount.Now += 1
-			NotificationButton.Notification:Play()
-			TweenService:Create(UpdatesFrame, TweenInfo.new(0.35, Enum.EasingStyle.Back, Enum.EasingDirection.In, 0, false, 0), {
-				Rotation = 5
-			}):Play()
-			TweenService:Create(NotificationButton, TweenInfo.new(0.15, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-				BackgroundTransparency = 1,
-				ImageTransparency = 1
-			}):Play()
-			task.delay(0.35, function()
-				if GUI.UpdateFrame.NotificationButtonCancelCount.Now > GUI.UpdateFrame.NotificationButtonCancelCount.To then
-					if GUI.UpdateFrame.OpenInfoButtonOpened then
-						OpenInfo()
-					end
-					TweenService:Create(UpdatesFrame, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0), {
-						Rotation = 0,
-						BackgroundTransparency = 1
-					}):Play()
-					TweenService:Create(UpdatesFrame.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0), {
-						Thickness = 0,
-						Transparency = 1
-					}):Play()
-					-- Me
-					TweenService:Create(UpdatesFrame.Me, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0), {
-						BackgroundTransparency = 1,
-						ImageTransparency = 1
-					}):Play()
-					TweenService:Create(UpdatesFrame.Me.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0), {
-						Thickness = 0,
-						Transparency = 1
-					}):Play()
-					-- Images
-					TweenService:Create(UpdateImage, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0), {
-						BackgroundTransparency = 1,
-					}):Play()
-					TweenService:Create(UpdateImage.Image, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0), {
-						BackgroundTransparency = 1,
-						ImageTransparency = 1
-					}):Play()
-					TweenService:Create(OpenInfoButton, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0), {
-						BackgroundTransparency = 1,
-						TextTransparency = 1
-					}):Play()
-					TweenService:Create(OpenInfoButton.Message, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0), {
-						BackgroundTransparency = 1,
-					}):Play()
-					TweenService:Create(OpenInfoButton.Message.TextLabel, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0), {
-						BackgroundTransparency = 1,
-						TextTransparency = 1
-					}):Play()
-					-- Background
-					TweenService:Create(UpdateBackgroundImage, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0), {
-						BackgroundTransparency = 1,
-						ImageTransparency = 1
-					}):Play()
-					-- Script
-					for i,v in pairs(UpdatesFrame.ScrollingFrame:GetChildren()) do
-						if v:IsA("TextLabel") then
-							TweenService:Create(v, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0), {
-								BackgroundTransparency = 1,
-								TextTransparency = 1
-							}):Play()
-						end
-					end
-					task.delay(1,function()
-						UpdatesFrame.Visible = false
-					end)
-				else
-					if GUI.UpdateFrame.OpenInfoButtonOpened then
-						OpenInfo()
-					end
-					TweenService:Create(UpdatesFrame, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0), {
-						Rotation = 0
-					}):Play()
-					task.wait(1.6)
-					TweenService:Create(NotificationButton, TweenInfo.new(0.15, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-						BackgroundTransparency = 0.3,
-						ImageTransparency = 0
-					}):Play()
-					GUI.UpdateFrame.NotificationButtonBoolean = false
-				end
-			end)
-		end
-	end)
-	
 	-- Open/Close
 	function GUI:OpenClose ()
 		if GUI.Open then
+			GUI.Open = false
 			GUI.CanBeOpen = false
 			GUI.OpenDirectionRight = not GUI.OpenDirectionRight
 			local TweenTime = 0.9
@@ -2960,11 +2684,11 @@ local script = G2L["3d"];
 			
 			if GUI.OpenDirectionRight then
 				TweenService:Create(UpdatesFrame, TweenInfo.new(TweenTime, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-					Position = UDim2.new(0.368, 0, 1.5, 0)
+					Position = UDim2.new(UpdatesFrame.Position.X.Scale, 0, 1.5, 0)
 				}):Play()
 			else
 				TweenService:Create(UpdatesFrame, TweenInfo.new(TweenTime, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-					Position = UDim2.new(0.368, 0, -1, 0)
+					Position = UDim2.new(UpdatesFrame.Position.X.Scale, 0, -1, 0)
 				}):Play()
 			end
 			
@@ -2992,16 +2716,16 @@ local script = G2L["3d"];
 			local BackgroundTweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0)
 			local BackgroundTweenGoal = {Position = UDim2.new(-1, 0, 0, 0)}
 			if GUI.OpenDirectionRight then
-				BackgroundTweenGoal = {Position = UDim2.new(1.5, 0, 0, 0)}
+				BackgroundTweenGoal = {Position = UDim2.new(1, 0, 0, 0)}
 			end
 			local BackgroundTween = TweenService:Create(Background, BackgroundTweenInfo, BackgroundTweenGoal)
 			BackgroundTween:Play()
 	
 			task.delay(1, function()
-				GUI.Open = false
 				GUI.CanBeOpen = true
 			end)
 		else
+			GUI.Open = true
 			GUI.CanBeOpen = false
 			local TweenTime = 0.9
 	
@@ -3011,7 +2735,7 @@ local script = G2L["3d"];
 			BlurEffectTween:Play()
 	
 			local BackgroundTweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0)
-			local BackgroundTweenGoal = {Position = UDim2.new(0.5, 0, 0.5, 0)}
+			local BackgroundTweenGoal = {Position = UDim2.new(0, 0, 0, 0)}
 			local BackgroundTween = TweenService:Create(Background, BackgroundTweenInfo, BackgroundTweenGoal)
 			BackgroundTween:Play()
 	
@@ -3038,10 +2762,9 @@ local script = G2L["3d"];
 					Transparency = 0.3
 				}):Play()
 				TweenService:Create(UpdatesFrame, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-					Position = UDim2.new(0.368, 0,0.353, 0)
+					Position = UDim2.new(UpdatesFrame.Position.X.Scale, 0, 0.328, 0)
 				}):Play()
 				task.wait(3)
-				GUI.Open = true
 				GUI.CanBeOpen = true
 			end)
 		end
@@ -3057,6 +2780,11 @@ local script = G2L["3d"];
 		end
 	end
 	UserInputService.InputBegan:Connect(InputBegan)
+	
+	function CharactedAdded (character:Model)
+		Create:Animate()
+	end
+	Player.CharacterAdded:Connect(CharactedAdded)
 	
 	task.delay(2, function()
 		GUI.Animate:GenerateButtons()
@@ -3075,58 +2803,8 @@ local script = G2L["3d"];
 			Transparency = 0.3
 		}):Play()
 		TweenService:Create(UpdatesFrame, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
-			Position = UDim2.new(0.368, 0, 0.353, 0)
+			Position = UDim2.new(UpdatesFrame.Position.X.Scale, 0, 0.328, 0)
 		}):Play()
-		coroutine.resume(coroutine.create(function()
-			wait(1)
-			NotificationButton.Notification:Play()
-			local ShakeBoolean = false
-			local CircleBoolean = false
-			local function Circle ()
-				if CircleBoolean then
-				else
-					CircleBoolean = true
-					TweenService:Create(NotificationButton.ImageLabel, TweenInfo.new(1.6, Enum.EasingStyle.Quint, Enum.EasingDirection.In), {
-						Size = UDim2.new(2, 0, 2, 0),
-						ImageTransparency = 0.3
-					}):Play()
-					task.delay(1.4, function()
-						TweenService:Create(NotificationButton.ImageLabel, TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
-							ImageTransparency = 1,
-						}):Play()
-						task.wait(1)
-						NotificationButton.ImageLabel.Size = UDim2.new(0, 0, 0, 0)
-						CircleBoolean = false
-					end)
-				end
-			end
-			local function Shake ()
-				if ShakeBoolean then
-				else
-					ShakeBoolean = true
-					NotificationButton.Shake:Play()
-					task.delay(NotificationButton.Shake.TimeLength, function()
-						task.wait(0.12)
-						ShakeBoolean = false
-					end)
-				end
-				TweenService:Create(NotificationButton, TweenInfo.new(0.6, Enum.EasingStyle.Elastic, Enum.EasingDirection.In), {
-					Rotation = -10
-				}):Play()
-				Circle()
-				wait(0.6)
-				TweenService:Create(NotificationButton, TweenInfo.new(0.6, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
-					Rotation = 10
-				}):Play()
-				wait(0.6)
-			end
-			for i = 1, 8 do
-				Shake()
-			end
-			for i = 1, 8 do wait(2.4)
-				Circle()
-			end
-		end))
 		task.wait(3)
 		GUI.CanBeOpen = true
 	end)
@@ -3142,55 +2820,41 @@ local script = G2L["3d"];
 	
 	print("Exploit Memory: Passed")
 	
-	local PositionSetConfirmed = true
+	if Player.CharacterAdded then
+		Create:Animate()
+	end
 	
 	-- Repeats
 	while Repeats do RunService.RenderStepped:Wait()
-		-- - -- - -- Processor ::
-		if getgenv then
-			getgenv().Bubble = true
-		end
-		-- - -- - -- GUI Position ::
-		if GUI.Open then
-			
-		end
-		-- ---- - - --- - ---- --
-		if Player.CharacterAdded then
-			ProcessingAnimate = true
-		else
-			ProcessingAnimate = false
-		end
+		--if Player.CharacterAdded then
+		--	ProcessingAnimate = true
+		--else
+		--	ProcessingAnimate = false
+		--end
 		-- ---- - - --- - ---- --
 		if UpdatesFrame.Visible ~= true then
-			if PositionSetConfirmed then
-				PositionSetConfirmed = false
+			if FramePosition.EmoteFrame[2] ~= UDim2.new(0.334, 0,0.5, 0) then
 				GUI.CanBeOpen = false
 				FramePosition.EmoteFrame[2] = UDim2.new(0.334, 0,0.5, 0)
-				FramePosition.AnimateFrame[2] = UDim2.new(0.404, 0,0.5, 0)
-				TweenService:Create(EmoteFrame, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut, 0, false, 0), {
+				TweenService:Create(EmoteFrame, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 0), {
 					Position = FramePosition.EmoteFrame[2],
 				}):Play()
-				task.delay(1, function()
-					local DistanceApart = (AnimateFrame.Position - EmoteFrame.Position).X.Scale
-					FramePosition.EmoteFrame[2] = UDim2.new(0.404 + -DistanceApart, 0,0.5, 0)
-					TweenService:Create(EmoteFrame, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut, 0, false, 0), {
-						Position = FramePosition.EmoteFrame[2],
-					}):Play()
-					TweenService:Create(AnimateFrame, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut, 0, false, 0), {
-						Position = FramePosition.AnimateFrame[2],
-					}):Play()
-					task.wait(1)
+				task.delay(2, function()
 					GUI.CanBeOpen = true
 				end)
 			end
 		end
 		-- ---- - - --- - ---- --
-		if ProcessingAnimate then
-			Create:Animate()
+		if Player.Character and Player.Character:FindFirstChild("Animate") then
+			Player.Character:FindFirstChild("Animate"):Destroy()
+			warn("Destroyed Roblox Animate")
 		end
+		--if ProcessingAnimate then
+		--	Create:Animate()
+		--end
 	end
 	
 end;
-task.spawn(C_3d);
+task.spawn(C_2f);
 
 return G2L["1"], require;
