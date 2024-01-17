@@ -1,4 +1,4 @@
-# Bubble v0.1
+# Bubble v0.2
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/BeemzZy/Bubble/main/Main.lua'))()
 
